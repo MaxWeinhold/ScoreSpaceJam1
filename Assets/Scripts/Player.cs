@@ -1,10 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using LootLocker.Requests;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
+	GameObject lb;
+	Leaderboard leaderboard;
 	public bool playing;
+	public bool dead=false;
 	
 	[Header("Vertical Movement")]
 	
@@ -28,53 +33,67 @@ public class Player : MonoBehaviour
 	[SerializeField] GameObject magnet;
 	float old_input;
 	
+	[Header("Leaderboard")]
+	[SerializeField] GameObject Panel;
+	
     // Start is called before the first frame update
     void Start()
     {
-    	playing=true;;
+    	playing=true;
+        lb = GameObject.Find("Leaderboard");
+        leaderboard = lb.GetComponent<Leaderboard>();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
     	
-    	//Vertical Movement Section------------------------------------------
+    	if(dead==false){
+    		
+	    	//Vertical Movement Section------------------------------------------
+	    	
+	    	//Input
+	    	float inputY = Input.GetAxis("Vertical");
+	    	
+	    	Vector3 pos1 = transform.position;
+	    	Vector3 pos2 = transform.position;
+	    	
+	    	pos2.y+=speed*inputY;
+	    	
+	    	//Check boundaries in which between the player can move
+	    	if(pos2.y<top && pos2.y>bottom){
+	    		pos1=pos2;
+	    	}
+	    	
+	    	//update position
+	    	transform.position=pos1;
+	    	
+	    	//Magent Swap Action-------------------------------------------------
+	    	
+	    	//input
+	    	float inputSwap = Input.GetAxis("Jump");
+	    	
+	    	//swap the magnet when pressing spacebar
+	    	if(old_input<inputSwap){
+	    		if(top_positive==true){
+	    			top_positive=false;
+	    		}
+	    		else{
+	    			top_positive=true;
+	    		}
+	    		old_input=1;
+	    	}
+	    	if(inputSwap==0){old_input=0;}
+	    	
+	    	//Placeholder. Later we will have an Animation for indicating visually that magnet is swaped
+	    	magnet.GetComponent<SpriteRenderer>().flipY=top_positive;
     	
-    	//Input
-    	float inputY = Input.GetAxis("Vertical");
-    	
-    	Vector3 pos1 = transform.position;
-    	Vector3 pos2 = transform.position;
-    	
-    	pos2.y+=speed*inputY;
-    	
-    	//Check boundaries in which between the player can move
-    	if(pos2.y<top && pos2.y>bottom){
-    		pos1=pos2;
     	}
-    	
-    	//update position
-    	transform.position=pos1;
-    	
-    	//Magent Swap Action-------------------------------------------------
-    	
-    	//input
-    	float inputSwap = Input.GetAxis("Jump");
-    	
-    	//swap the magnet when pressing spacebar
-    	if(old_input<inputSwap){
-    		if(top_positive==true){
-    			top_positive=false;
-    		}
-    		else{
-    			top_positive=true;
-    		}
-    		old_input=1;
+    	else{
+    		Panel.SetActive(true);
     	}
-    	if(inputSwap==0){old_input=0;}
-    	
-    	//Placeholder. Later we will have an Animation for indicating visually that magnet is swaped
-    	magnet.GetComponent<SpriteRenderer>().flipY=top_positive;
     	
     }
+    
+    
 }
