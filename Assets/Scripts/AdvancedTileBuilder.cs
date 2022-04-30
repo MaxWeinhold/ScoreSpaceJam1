@@ -7,7 +7,10 @@ public class AdvancedTileBuilder : MonoBehaviour
 {
 //	[SerializeField]
 //	Tile Floor1;
-	
+	[SerializeField]
+    Tilemap FGMap;
+    [SerializeField]
+    Vector3Int currentCell;
 	
 	
 	[SerializeField]
@@ -171,10 +174,7 @@ public class AdvancedTileBuilder : MonoBehaviour
 	Tile [] TileChunkF12;
 	
 	
-	[SerializeField]
-    Tilemap FGMap;
-    [SerializeField]
-    Vector3Int currentCell;
+	
     bool createFloor = true;
 	
     // Start is called before the first frame update
@@ -197,7 +197,14 @@ public class AdvancedTileBuilder : MonoBehaviour
     			Vector3Int Cell = currentCell;
     			//Cell.x +=1;
     			
-    			if(FGMap.HasTile(Cell)==false){
+    			bool anytiles=false;
+    			for(int i = 0; i < levels; i++){
+    				Vector3Int cyt = Cell;
+		    		cyt.y =Cell.y-i;
+		    		if(FGMap.HasTile(cyt)==true){anytiles=true;}
+    			}
+    			
+    			if(anytiles==false){
     				
     				if(randomGeneration==true){
     					//Random rnd = new Random();
