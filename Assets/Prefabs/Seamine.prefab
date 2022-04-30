@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 6858651183438462894}
   - component: {fileID: 5846975045889612458}
   - component: {fileID: 8449582223119492938}
-  - component: {fileID: 7577357011317538315}
   - component: {fileID: 5193135235009280933}
+  - component: {fileID: 3153363318101983080}
   m_Layer: 0
   m_Name: Seamine
   m_TagString: Untagged
@@ -98,20 +98,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 2
---- !u!114 &7577357011317538315
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 26551196372515798}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afd07f4bcd37a484991afa7d9c7661bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  frequency: 4
-  amplitude: 1
 --- !u!114 &5193135235009280933
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,5 +108,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3402d430a49214e4a8ec98c073d756dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3153363318101983080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26551196372515798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac60f65e81a54d146a3c9b8373b8f317, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
