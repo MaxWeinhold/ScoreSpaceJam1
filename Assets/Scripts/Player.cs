@@ -70,6 +70,9 @@ public class Player : MonoBehaviour
 	    	
 	    	//Magent Swap Action-------------------------------------------------
 	    	
+	    	//Here come the animation
+	    	GetComponent<Animator>().SetBool("MagnetOnTop", top_positive);
+	    	
 	    	//input
 	    	float inputSwap = Input.GetAxis("Jump");
 	    	
@@ -86,7 +89,8 @@ public class Player : MonoBehaviour
 	    	if(inputSwap==0){old_input=0;}
 	    	
 	    	//Placeholder. Later we will have an Animation for indicating visually that magnet is swaped
-	    	magnet.GetComponent<SpriteRenderer>().flipY=top_positive;
+	    	//magnet.GetComponent<SpriteRenderer>().flipY=top_positive;
+	    	
     	
     	}
     	else{
