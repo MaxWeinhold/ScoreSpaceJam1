@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+	public bool playing;
+	
 	[Header("Vertical Movement")]
 	
 	[Tooltip("Speed of vertical Movement")]
@@ -29,7 +31,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+    	playing=true;;
     }
 
     // Update is called once per frame

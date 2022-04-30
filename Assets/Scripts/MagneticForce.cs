@@ -17,6 +17,10 @@ public class MagneticForce : MonoBehaviour
 	[Range(0, 3)]
 	[SerializeField] float speed = 1;
 	
+	[Header("Kind of object")]
+	
+	[SerializeField] bool Mine = false;
+	[SerializeField] bool Treasure = false;
 	
     // Start is called before the first frame update
     void Start()
@@ -49,6 +53,22 @@ public class MagneticForce : MonoBehaviour
     			else{pos1.y-=speed*0.01f;}
     		}
     		transform.position=pos1;
+    	}
+    }
+    void OnTriggerEnter2D(Collider2D other){
+    	
+    	if(other.tag=="Player"){
+    		print("Teeeeeest");
+    		if(Treasure==true){
+    			int points = PlayerPrefs.GetInt("Points");
+    			points+=1;
+    			PlayerPrefs.SetInt("Points",points);
+    			Destroy(gameObject);
+    		}
+    		if(Mine==true){
+    			player.playing=false;
+    			Destroy(submarine);
+    		}
     	}
     }
 }

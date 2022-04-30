@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &26551196372515798
+--- !u!1 &4356931452430565266
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,41 +8,41 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6858651183438462894}
-  - component: {fileID: 5846975045889612458}
-  - component: {fileID: 8449582223119492938}
-  - component: {fileID: 5193135235009280933}
-  - component: {fileID: 6609181985011699636}
-  - component: {fileID: 8210711828134168262}
-  - component: {fileID: 3153363318101983080}
+  - component: {fileID: 1888800552378589541}
+  - component: {fileID: 6024428766906745541}
+  - component: {fileID: 6553111294747544434}
+  - component: {fileID: 4181412016524912828}
+  - component: {fileID: 3389358116539970279}
+  - component: {fileID: -2318439628924577830}
+  - component: {fileID: 6919055117195980817}
   m_Layer: 0
-  m_Name: Seamine
-  m_TagString: Mine
+  m_Name: Treasure
+  m_TagString: Treasure
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6858651183438462894
+--- !u!4 &1888800552378589541
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 26551196372515798}
+  m_GameObject: {fileID: 4356931452430565266}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.43, y: 1.04, z: 3.3}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &5846975045889612458
+--- !u!212 &6024428766906745541
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 26551196372515798}
+  m_GameObject: {fileID: 4356931452430565266}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -76,50 +76,50 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 71bf00f687331b347bf0871a08da3837, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5cf089bd3a5f4e647ac715d9466890b6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.64, y: 0.64}
+  m_Size: {x: 2, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8449582223119492938
+--- !u!114 &6553111294747544434
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 26551196372515798}
+  m_GameObject: {fileID: 4356931452430565266}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 459c84a47a0e6dd48a386372433dd898, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 2
---- !u!114 &5193135235009280933
+--- !u!114 &4181412016524912828
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 26551196372515798}
+  m_GameObject: {fileID: 4356931452430565266}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3402d430a49214e4a8ec98c073d756dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!50 &6609181985011699636
+--- !u!50 &3389358116539970279
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 26551196372515798}
+  m_GameObject: {fileID: 4356931452430565266}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -133,29 +133,29 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &8210711828134168262
+--- !u!58 &-2318439628924577830
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 26551196372515798}
+  m_GameObject: {fileID: 4356931452430565266}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1
---- !u!114 &3153363318101983080
+--- !u!114 &6919055117195980817
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 26551196372515798}
+  m_GameObject: {fileID: 4356931452430565266}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ac60f65e81a54d146a3c9b8373b8f317, type: 3}
@@ -163,5 +163,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   angle_of_attraction: 1
   speed: 1
-  Mine: 1
-  Treasure: 0
+  Mine: 0
+  Treasure: 1

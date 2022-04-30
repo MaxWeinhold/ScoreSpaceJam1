@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class TileMovement : MonoBehaviour
 {
+	GameObject submarine;
+	Player player;
 	[SerializeField]
 	private float movementSpeed = 5f;
 	
     // Start is called before the first frame update
     void Start()
     {
-        
+        submarine = GameObject.Find("Submarine");
+        player = submarine.GetComponent<Player>();
     }
 
     // Update is called once per frame
@@ -23,6 +26,8 @@ public class TileMovement : MonoBehaviour
         //float verticalInput = Input.GetAxis("Vertical");
         float verticalInput = 0;
     	
-        transform.position = transform.position + new Vector3(horizontalInput * movementSpeed * Time.deltaTime, verticalInput * movementSpeed * Time.deltaTime, 0);
+        if(player.playing){
+        	transform.position = transform.position + new Vector3(horizontalInput * movementSpeed * Time.deltaTime, verticalInput * movementSpeed * Time.deltaTime, 0);
+        }
     }
 }

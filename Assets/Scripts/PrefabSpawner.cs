@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PrefabSpawner : MonoBehaviour
 {
+	GameObject submarine;
+	Player player;
 	[Header("Vertical Spawn Locations")]
 	
 	[Tooltip("Bottom spawn point.")]
@@ -34,7 +36,9 @@ public class PrefabSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+		PlayerPrefs.SetInt("Points",0);
+		submarine = GameObject.Find("Submarine");
+        player = submarine.GetComponent<Player>();
     }
 
     // Update is called once per frame
@@ -48,7 +52,7 @@ public class PrefabSpawner : MonoBehaviour
         }
         
         //cooldown is down, next prefab will be spawned
-        if(timer>cooldown){
+        if(timer>cooldown && player.playing){
         	// set up the next cooldown time randomly
         	timer=0;
         	float r = Random.Range(minimum_time, maximum_time);
@@ -56,11 +60,17 @@ public class PrefabSpawner : MonoBehaviour
         	
         	// Spawn seamines or treasures
         	Vector3 position = transform.position;
+        	
+        	//randomly select wether object is above or below submarine
         	int r2 = Random.Range(0, 2);
         	if(r2==0){position.y=bottom;}
         	else{position.y=top;}
         	Quaternion rotation = new Quaternion(0, 0, 0, 0);
-        	Instantiate(SeaMine, position, rotation);
+        	
+        	//randomly select treasure or seamine
+        	int r3 = Random.Range(0, 2);
+        	if(r3==0){Instantiate(SeaMine, position, rotation);}
+        	else{Instantiate(Treasure, position, rotation);}
         }
     }
 }
