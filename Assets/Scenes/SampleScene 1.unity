@@ -10589,6 +10589,11 @@ GameObject:
   m_Component:
   - component: {fileID: 2142621525}
   - component: {fileID: 2142621524}
+  - component: {fileID: 2142621526}
+  - component: {fileID: 2142621529}
+  - component: {fileID: 2142621528}
+  - component: {fileID: 2142621527}
+  - component: {fileID: 2142621530}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -10603,7 +10608,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2142621523}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c482c7df27d59374d9882926798c0851, type: 3}
   m_Name: 
@@ -10625,3 +10630,180 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2142621526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2142621523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c482c7df27d59374d9882926798c0851, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Floor1: {fileID: 11400000, guid: a09e37480c3944d4ea93cd811a1cf710, type: 2}
+  FGMap: {fileID: 1702825666}
+  currentCell: {x: 24, y: 4, z: 0}
+--- !u!114 &2142621527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2142621523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c482c7df27d59374d9882926798c0851, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Floor1: {fileID: 11400000, guid: a09e37480c3944d4ea93cd811a1cf710, type: 2}
+  FGMap: {fileID: 1702825666}
+  currentCell: {x: 24, y: 7, z: 0}
+--- !u!114 &2142621528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2142621523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c482c7df27d59374d9882926798c0851, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Floor1: {fileID: 11400000, guid: a09e37480c3944d4ea93cd811a1cf710, type: 2}
+  FGMap: {fileID: 1702825666}
+  currentCell: {x: 24, y: 6, z: 0}
+--- !u!114 &2142621529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2142621523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c482c7df27d59374d9882926798c0851, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Floor1: {fileID: 11400000, guid: a09e37480c3944d4ea93cd811a1cf710, type: 2}
+  FGMap: {fileID: 1702825666}
+  currentCell: {x: 24, y: 5, z: 0}
+--- !u!114 &2142621530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2142621523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6027a88af6188949a86a25860423e37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levels: 4
+  randomGeneration: 1
+  randomNumbers: 3
+  TileChunkA:
+  - {fileID: 11400000, guid: 730f70639d2eddc4981db3df62b2d8f3, type: 2}
+  - {fileID: 11400000, guid: a758413855565414fa6da84745029f45, type: 2}
+  - {fileID: 11400000, guid: 1776407d47f532b48a88b8e1d6d5939c, type: 2}
+  TileChunkA2:
+  - {fileID: 11400000, guid: 6d27ecf46250b8b4b81f099a4a095d4a, type: 2}
+  - {fileID: 11400000, guid: f18079f6f8862204e8271172e0a5ab29, type: 2}
+  - {fileID: 11400000, guid: 723b545db8762be46acabf5b4ac4d768, type: 2}
+  TileChunkA3:
+  - {fileID: 11400000, guid: 401a2c0737c6766479af6050b6bf46ae, type: 2}
+  - {fileID: 11400000, guid: 9a17e229fb0f4c745ad102327a8a7c2d, type: 2}
+  - {fileID: 11400000, guid: c7f0f4060eebae145b12ba8fd6b1f0bd, type: 2}
+  TileChunkA4:
+  - {fileID: 11400000, guid: a5b14ba0a3f8c1446a3a073e1606f97a, type: 2}
+  - {fileID: 11400000, guid: a5b14ba0a3f8c1446a3a073e1606f97a, type: 2}
+  - {fileID: 11400000, guid: a5b14ba0a3f8c1446a3a073e1606f97a, type: 2}
+  TileChunkA5: []
+  TileChunkA6: []
+  TileChunkA7: []
+  TileChunkA8: []
+  TileChunkA9: []
+  TileChunkA10: []
+  TileChunkA11: []
+  TileChunkA12: []
+  TileChunkB:
+  - {fileID: 11400000, guid: 199d2839f00a7ce4f90147fafe4349ef, type: 2}
+  - {fileID: 11400000, guid: 4ce61ce358411e94282abe9d6a04bd5e, type: 2}
+  - {fileID: 11400000, guid: 716ecbff391f0cf41a06c2685894933f, type: 2}
+  TileChunkB2:
+  - {fileID: 11400000, guid: a6c73ffe2b68281488cbd965adbdf726, type: 2}
+  - {fileID: 11400000, guid: fab5276e195659c4f89ce04f159d8a94, type: 2}
+  - {fileID: 11400000, guid: b8cc8d65c3ff7124fbfcd2983134821a, type: 2}
+  TileChunkB3:
+  - {fileID: 11400000, guid: ddacc67718ef28a4ab7c2736d952d7e7, type: 2}
+  - {fileID: 11400000, guid: 64aad66aacb6bb1468156f281a9a170f, type: 2}
+  - {fileID: 11400000, guid: 3e2855c38def9664f834787bb5c24145, type: 2}
+  TileChunkB4:
+  - {fileID: 11400000, guid: a5b14ba0a3f8c1446a3a073e1606f97a, type: 2}
+  - {fileID: 11400000, guid: a5b14ba0a3f8c1446a3a073e1606f97a, type: 2}
+  - {fileID: 11400000, guid: a5b14ba0a3f8c1446a3a073e1606f97a, type: 2}
+  TileChunkB5:
+  - {fileID: 11400000, guid: 49d0fe8598c12b9438588542690f6078, type: 2}
+  TileChunkB6: []
+  TileChunkB7: []
+  TileChunkB8: []
+  TileChunkB9: []
+  TileChunkB10: []
+  TileChunkB11: []
+  TileChunkB12: []
+  TileChunkC:
+  - {fileID: 11400000, guid: fa2589959c416ea46825a583af2466e2, type: 2}
+  - {fileID: 11400000, guid: ee5d8ff670f72274ab39a36e7e23e8b7, type: 2}
+  - {fileID: 11400000, guid: cc7dd0eaf1a3bc44aa15f09ccfd751b2, type: 2}
+  TileChunkC2: []
+  TileChunkC3: []
+  TileChunkC4: []
+  TileChunkC5: []
+  TileChunkC6: []
+  TileChunkC7: []
+  TileChunkC8: []
+  TileChunkC9: []
+  TileChunkC10: []
+  TileChunkC11: []
+  TileChunkC12: []
+  TileChunkD: []
+  TileChunkD2: []
+  TileChunkD3: []
+  TileChunkD4: []
+  TileChunkD5: []
+  TileChunkD6: []
+  TileChunkD7: []
+  TileChunkD8: []
+  TileChunkD9: []
+  TileChunkD10: []
+  TileChunkD11: []
+  TileChunkD12: []
+  TileChunkE: []
+  TileChunkE2: []
+  TileChunkE3: []
+  TileChunkE4: []
+  TileChunkE5: []
+  TileChunkE6: []
+  TileChunkE7: []
+  TileChunkE8: []
+  TileChunkE9: []
+  TileChunkE10: []
+  TileChunkE11: []
+  TileChunkE12: []
+  TileChunkF: []
+  TileChunkF2: []
+  TileChunkF3: []
+  TileChunkF4: []
+  TileChunkF5: []
+  TileChunkF6: []
+  TileChunkF7: []
+  TileChunkF8: []
+  TileChunkF9: []
+  TileChunkF10: []
+  TileChunkF11: []
+  TileChunkF12: []
+  FGMap: {fileID: 137978589}
+  currentCell: {x: 23, y: -1, z: 0}
