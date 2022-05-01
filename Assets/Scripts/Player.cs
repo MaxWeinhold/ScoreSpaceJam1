@@ -4,10 +4,12 @@ using UnityEngine;
 using LootLocker.Requests;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(ParticleSystem))]
 public class Player : MonoBehaviour
 {
 	GameObject lb;
 	Leaderboard leaderboard;
+	
 	bool leaderboardui=false;
 	public bool playing;
 	public bool dead=false;
@@ -36,6 +38,9 @@ public class Player : MonoBehaviour
 	
 	[Header("Leaderboard")]
 	[SerializeField] GameObject Panel;
+	
+	[Header("Bubbles")]
+	[SerializeField] private ParticleSystem ps;
 	
     // Start is called before the first frame update
     void Start()
@@ -88,16 +93,25 @@ public class Player : MonoBehaviour
 	    	//Adjust Speed depending on Input
 	    	if(inputX<-0.1f){
 	    		PlayerPrefs.SetFloat("Speed",0.5f);
+	    		
+	    		var emission = ps.emission;
+       			emission.rateOverTime = 10;
 	    		//SFX-------------------------------------------------------------------------------
 	    		//Sound Speed adjustment (Maybe pitch)
 	    	}
 	    	else if(inputX>0.1f){
 	    		PlayerPrefs.SetFloat("Speed",2);
+	    		
+	    		var emission = ps.emission;
+       			emission.rateOverTime = 70;
 	    		//SFX-------------------------------------------------------------------------------
 	    		//Sound Speed adjustment (Maybe pitch)
 	    	}
 	    	else{
 	    		PlayerPrefs.SetFloat("Speed",1);
+	    		
+	    		var emission = ps.emission;
+       			emission.rateOverTime = 40;
 	    		//SFX-------------------------------------------------------------------------------
 	    		//Sound Speed adjustment (Maybe pitch)
 	    	}
