@@ -162,7 +162,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac60f65e81a54d146a3c9b8373b8f317, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  angle_of_attraction: 2
+  angle_of_attraction: 1.5
+  range_of_attraction: 2.5
   speed: 3
   Mine: 0
   Treasure: 1

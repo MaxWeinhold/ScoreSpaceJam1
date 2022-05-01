@@ -6,8 +6,13 @@ public class MagneticForce : MonoBehaviour
 {
 	GameObject submarine;
 	Player player;
+	
+	GameObject spawner;
+	PrefabSpawner PS;
+	
 	GameObject lb;
 	Leaderboard leaderboard;
+	
 	float disty;
 	float distx;
 	bool top = false;
@@ -16,7 +21,9 @@ public class MagneticForce : MonoBehaviour
 	
 	[Range(0, 3)]
 	[SerializeField] float angle_of_attraction = 1;
-	[Range(0, 3)]
+	[Range(1, 10)]
+	[SerializeField] float range_of_attraction = 1;
+	[Range(0, 10)]
 	[SerializeField] float speed = 1;
 	
 	[Header("Kind of object")]
@@ -30,6 +37,10 @@ public class MagneticForce : MonoBehaviour
     {
         submarine = GameObject.Find("Submarine");
         player = submarine.GetComponent<Player>();
+        
+        spawner = GameObject.Find("PrefabSpawner");
+        PS = spawner.GetComponent<PrefabSpawner>();
+        
         lb = GameObject.Find("Leaderboard");
         leaderboard = lb.GetComponent<Leaderboard>();
         
@@ -43,20 +54,21 @@ public class MagneticForce : MonoBehaviour
 	    	disty = Mathf.Abs(submarine.transform.position.y - transform.position.y);
 	    	
 	    	//check if bomb is below or above submarine
-	    	//if(submarine.transform.position.y > transform.position.y){top=false;}else{top=true;}
+	    	//if(submarine.transform.position.y > transform.position.y){subtop=false;}else{subtop=true;}
 	    	
 	    	//checks if prefab is below the magnet in an given angle
-	    	if(distx<angle_of_attraction*disty){
-	    		Vector3 pos1 = transform.position;
+	    	if(distx<angle_of_attraction*disty ||  distx<range_of_attraction){
 	    		
+	    		Vector3 pos1 = transform.position;
+	    		Vector3 pos2 = transform.position;
 	    		if(player.top_positive==true){
-	    			//vertical attraction
-	    			if(!top){pos1.y+=speed*0.01f;}
-	    			else{pos1.y+=speed*0.01f;}
-	    		}else{
-	    			//vertical repeliation
-	    			if(top){pos1.y-=speed*0.01f;}
-	    			else{pos1.y-=speed*0.01f;}
+	    			pos2.y+=speed*0.01f*((PS.top-PS.bottom+0.5f)/2-disty);
+		    	}else{
+		    		pos2.y-=speed*0.01f*((PS.top-PS.bottom+0.5f)/2-disty);
+		    	}
+	    		
+	    		if(pos2.y<PS.top && pos2.y>PS.bottom ){
+	    			pos1=pos2;
 	    		}
 	    		transform.position=pos1;
 	    	}

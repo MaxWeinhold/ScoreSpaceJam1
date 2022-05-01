@@ -6,17 +6,18 @@ public class PrefabSpawner : MonoBehaviour
 {
 	GameObject submarine;
 	Player player;
+	
 	[Header("Vertical Spawn Locations")]
 	
 	[Tooltip("Bottom spawn point.")]
 	[SerializeField]
 	[Range(0, 3)]
-	float bottom = 1.9f;
+	public float bottom = 1.9f;
 	
 	[Tooltip("Top spawn point.")]
 	[SerializeField]
 	[Range(8, 10)]
-	float top = 8.5f;
+	public float top = 8.5f;
 	
 	[Header("Spawning Objects")]
 	[SerializeField] GameObject SeaMine;
