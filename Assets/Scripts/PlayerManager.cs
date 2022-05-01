@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using LootLocker.Requests;
+using UnityEngine.UI;
 
 public class PlayerManager : MonoBehaviour
 {
 	
 	GameObject lb;
 	Leaderboard leaderboard;
+	[SerializeField] Text playerNameInputfield;
 	
     // Start is called before the first frame update
     void Start()
@@ -16,6 +18,17 @@ public class PlayerManager : MonoBehaviour
         leaderboard = lb.GetComponent<Leaderboard>();
         
     	StartCoroutine(SetupRoutine());
+    }
+    
+    public void SetPlayerName(){
+    	LootLockerSDKManager.SetPlayerName(playerNameInputfield.text, (response)=>{
+    	                                   	if(response.success){
+    	                                   		Debug.Log("Successfully set player name");
+    	                                   	}
+    	                                   	else{
+    	                                   		Debug.Log("Could not set player name"+response.Error);
+    	                                   	}
+    	                                   });
     }
     
     IEnumerator SetupRoutine(){

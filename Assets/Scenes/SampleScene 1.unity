@@ -3807,6 +3807,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15432126eef85694da1d15a681cba130, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerNameInputfield: {fileID: 1885419449}
 --- !u!4 &653541673
 Transform:
   m_ObjectHideFlags: 0
@@ -4339,7 +4340,19 @@ MonoBehaviour:
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 653541672}
+        m_TargetAssemblyTypeName: PlayerManager, Assembly-CSharp
+        m_MethodName: SetPlayerName
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -5352,10 +5365,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: ef834b9f2c4856a43893c914580a360e, type: 3}
-    m_FontSize: 14
+    m_FontSize: 20
     m_FontStyle: 2
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -5520,6 +5533,8 @@ MonoBehaviour:
   Panel1: {fileID: 368295380}
   Panel2: {fileID: 660627802}
   Frame: {fileID: 1691489149}
+  Username_field: {fileID: 1885419449}
+  warning_text: {fileID: 133661377}
 --- !u!1 &1542406172
 GameObject:
   m_ObjectHideFlags: 0
@@ -5606,6 +5621,7 @@ GameObject:
   - component: {fileID: 1632245360}
   - component: {fileID: 1632245362}
   - component: {fileID: 1632245361}
+  - component: {fileID: 1632245363}
   m_Layer: 5
   m_Name: Leaderboard
   m_TagString: Untagged
@@ -5674,6 +5690,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1632245359}
   m_CullTransparentMesh: 0
+--- !u!114 &1632245363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1632245359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41cf033082ce7bb40ad68124a4df1a46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1689447803
 GameObject:
   m_ObjectHideFlags: 0
@@ -14130,10 +14158,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: ef834b9f2c4856a43893c914580a360e, type: 3}
-    m_FontSize: 14
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0

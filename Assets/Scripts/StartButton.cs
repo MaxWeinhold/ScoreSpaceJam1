@@ -12,6 +12,8 @@ public class StartButton : MonoBehaviour
 	[SerializeField] GameObject Panel1;
 	[SerializeField] GameObject Panel2;
 	[SerializeField] GameObject Frame;
+	[SerializeField] Text Username_field;
+	[SerializeField] Text warning_text;
 	
 	
     // Start is called before the first frame update
@@ -33,8 +35,17 @@ public class StartButton : MonoBehaviour
     		Panel2.SetActive(true);
     	}
     	else if(clicks==1){
-    		player.playing=true;
-    		Frame.SetActive(false);
+    		string userID = Username_field.text.ToString();
+    		
+    		if(userID.Length<10 && userID.Length>0){
+    			PlayerPrefs.SetString("Username",userID);
+    			player.playing=true;
+    			Frame.SetActive(false);
+    		}
+    		else if(userID.Length==0){
+    			warning_text.text="You need a name for your highscore!";
+    		}
+    		else{warning_text.text="Your name is longer than 10 characters!";}
     	}
     }
 }

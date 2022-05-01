@@ -104,8 +104,12 @@ public class MagneticForce : MonoBehaviour
     }
     IEnumerator DieRoutine(){
     	int points = PlayerPrefs.GetInt("Points");
+    	print("test0");
     	yield return leaderboard.SubmitScoreRoutine(points);
-    	yield return leaderboard.FetchTopHighscoresRoutine();
-    	//player.dead=true;
+    	print("test1");
+    	//yield return leaderboard.FetchTopHighscoresRoutine();
+    	print("test2");
+    	//yield return leaderboard.FetchTopHighscoresRoutine();
+    	player.dead=true;
     }
 }
