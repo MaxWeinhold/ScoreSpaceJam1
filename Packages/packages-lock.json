@@ -1,19 +1,12 @@
 {
   "dependencies": {
     "com.lootlocker.lootlockersdk": {
-      "version": "file:D:/ComicandSonsProductions/ITCHIO/unity-sdk-main",
+      "version": "file:../unity-sdk-main",
       "depth": 0,
       "source": "local",
       "dependencies": {
         "com.unity.nuget.newtonsoft-json": "2.0.0"
       }
-    },
-    "com.unity.2d.pixel-perfect": {
-      "version": "3.0.2",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {},
-      "url": "https://packages.unity.com"
     },
     "com.unity.2d.sprite": {
       "version": "1.0.0",
