@@ -13,7 +13,7 @@ public class PrefabDestroyer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-    	if(transform.position.x<-19){
+    	if(transform.position.x<-26){
     		Destroy(gameObject);
     	}
     }
