@@ -8,6 +8,11 @@ public class TileMovement : MonoBehaviour
 	Player player;
 	[SerializeField]
 	private float movementSpeed = 5f;
+ 	float timer;
+ 	public float timespeed = 1;
+	private int time_relation = 250;
+ 	[SerializeField]
+	private int max_timespeed = 10;
 	
     // Start is called before the first frame update
     void Start()
@@ -29,7 +34,14 @@ public class TileMovement : MonoBehaviour
         float speed = PlayerPrefs.GetFloat("Speed");
         
         if(player.playing){
-        	transform.position = transform.position + new Vector3(horizontalInput * speed * movementSpeed * Time.deltaTime, 0, 0);
+	        
+        	timer = PlayerPrefs.GetFloat("Time");
+        	if(timespeed<max_timespeed){
+        		timespeed = 1 + timer/time_relation;
+        		PlayerPrefs.SetFloat("TimeSpped",timespeed);
+        	}
+        	
+        	transform.position = transform.position + new Vector3(horizontalInput * speed * timespeed * movementSpeed * Time.deltaTime, 0, 0);
         }
     }
 }

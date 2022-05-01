@@ -21,6 +21,7 @@ public class Timer : MonoBehaviour
     {
     	if(player.playing == true){
 	        timer += Time.deltaTime;
+	        PlayerPrefs.SetFloat("Time",timer);
 	        int minutes = Mathf.FloorToInt(timer / 60F);
 		  	int seconds = Mathf.FloorToInt(timer % 60F);
 		  	int milliseconds = Mathf.FloorToInt((timer * 100F) % 100F);

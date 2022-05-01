@@ -26,7 +26,7 @@ public class TileBuilder : MonoBehaviour
     	int FGpos_i = (int) FGpos;
     	float FGposDelta = FGpos-FGpos_i;
     	
-    	if(FGposDelta<-0.9){
+    	if(FGposDelta<-0.5){
     		if(createFloor==true){
     			Vector3Int Cell = currentCell;
     			Cell.x +=1;

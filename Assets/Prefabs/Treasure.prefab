@@ -101,6 +101,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 4
+  timespeed: 1
+  max_timespeed: 10
 --- !u!114 &4181412016524912828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,8 +165,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   angle_of_attraction: 1.5
-  range_of_attraction: 2.5
-  speed: 3
+  range_of_attraction: 3
+  speed: 3.5
   Mine: 0
   Treasure: 1
 --- !u!95 &8890561937752690860

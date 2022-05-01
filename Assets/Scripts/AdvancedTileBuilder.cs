@@ -192,7 +192,7 @@ public class AdvancedTileBuilder : MonoBehaviour
     	
     	//print(FGposDelta);
     	
-    	if(FGposDelta<-0.9){
+    	if(FGposDelta<-0.5){
     		if(createFloor==true){
     			Vector3Int Cell = currentCell;
     			//Cell.x +=1;

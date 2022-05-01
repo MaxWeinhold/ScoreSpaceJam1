@@ -62,9 +62,11 @@ public class MagneticForce : MonoBehaviour
 	    		Vector3 pos1 = transform.position;
 	    		Vector3 pos2 = transform.position;
 	    		if(player.top_positive==true){
-	    			pos2.y+=speed*0.01f*((PS.top-PS.bottom+0.5f)/2-disty);
+	    			//float relativeForce = 0;
+	    			//if((PS.top-PS.bottom)/2<disty){}
+	    			pos2.y+=speed*0.01f*((PS.top-PS.bottom)/2-disty) * PlayerPrefs.GetFloat("TimeSpped");
 		    	}else{
-		    		pos2.y-=speed*0.01f*((PS.top-PS.bottom+0.5f)/2-disty);
+		    		pos2.y-=speed*0.01f*((PS.top-PS.bottom)/2-disty) * PlayerPrefs.GetFloat("TimeSpped");
 		    	}
 	    		
 	    		if(pos2.y<PS.top && pos2.y>PS.bottom ){
