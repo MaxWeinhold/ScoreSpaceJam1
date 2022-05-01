@@ -67,6 +67,20 @@ public class Player : MonoBehaviour
 	    	
 	    	//update position
 	    	transform.position=pos1;
+	   
+	    	//Horizontally Movement Section--------------------------------------
+	    	
+	    	//Input
+	    	float inputX = Input.GetAxis("Horizontal");
+	    	if(inputX<-0.1f){
+	    		PlayerPrefs.SetFloat("Speed",0.5f);
+	    	}
+	    	else if(inputX>0.1f){
+	    		PlayerPrefs.SetFloat("Speed",2);
+	    	}
+	    	else{
+	    		PlayerPrefs.SetFloat("Speed",1);
+	    	}
 	    	
 	    	//Magent Swap Action-------------------------------------------------
 	    	

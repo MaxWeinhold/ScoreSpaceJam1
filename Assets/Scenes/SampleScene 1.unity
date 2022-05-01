@@ -2653,7 +2653,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 459c84a47a0e6dd48a386372433dd898, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 2
+  movementSpeed: 4
 --- !u!1 &162945008
 GameObject:
   m_ObjectHideFlags: 0
@@ -2755,8 +2755,8 @@ MonoBehaviour:
   playing: 0
   dead: 0
   speed: 0.05
-  bottom: 1.9
-  top: 8.5
+  bottom: 3
+  top: 7
   top_positive: 1
   magnet: {fileID: 1192069307}
   Panel: {fileID: 1632245359}
@@ -12345,7 +12345,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 459c84a47a0e6dd48a386372433dd898, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 1.5
+  movementSpeed: 3
 --- !u!1 &1760353007
 GameObject:
   m_ObjectHideFlags: 0
@@ -12481,8 +12481,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b8e881ddc6cdcc43bcb9914c1f4f557, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bottom: 1.9
-  top: 8.5
+  bottom: 0
+  top: 10
   SeaMine: {fileID: 26551196372515798, guid: d60d66c2ab754c346883a0e7ad3e0a85, type: 3}
   Treasure: {fileID: 4356931452430565266, guid: 0f2d300db809251409e865b8798f892e, type: 3}
   start_time: 2

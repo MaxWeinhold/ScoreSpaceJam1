@@ -15,7 +15,7 @@ public class PrefabSpawner : MonoBehaviour
 	
 	[Tooltip("Top spawn point.")]
 	[SerializeField]
-	[Range(7, 9)]
+	[Range(8, 10)]
 	float top = 8.5f;
 	
 	[Header("Spawning Objects")]

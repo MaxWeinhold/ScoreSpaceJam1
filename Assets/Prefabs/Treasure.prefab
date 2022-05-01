@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 459c84a47a0e6dd48a386372433dd898, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 2
+  movementSpeed: 4
 --- !u!114 &4181412016524912828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,8 +162,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac60f65e81a54d146a3c9b8373b8f317, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  angle_of_attraction: 1
-  speed: 1
+  angle_of_attraction: 2
+  speed: 3
   Mine: 0
   Treasure: 1
 --- !u!95 &8890561937752690860

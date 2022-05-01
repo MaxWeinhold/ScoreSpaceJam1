@@ -26,8 +26,10 @@ public class TileMovement : MonoBehaviour
         //float verticalInput = Input.GetAxis("Vertical");
         float verticalInput = 0;
     	
+        float speed = PlayerPrefs.GetFloat("Speed");
+        
         if(player.playing){
-        	transform.position = transform.position + new Vector3(horizontalInput * movementSpeed * Time.deltaTime, verticalInput * movementSpeed * Time.deltaTime, 0);
+        	transform.position = transform.position + new Vector3(horizontalInput * speed * movementSpeed * Time.deltaTime, 0, 0);
         }
     }
 }

@@ -65,7 +65,6 @@ public class MagneticForce : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other){
     	
     	if(other.tag=="Player"){
-    		print("Teeeeeest");
     		if(Treasure==true){
     			int points = PlayerPrefs.GetInt("Points");
     			points+=1;
