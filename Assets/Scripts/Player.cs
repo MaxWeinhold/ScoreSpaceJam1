@@ -152,5 +152,23 @@ public class Player : MonoBehaviour
     			//Unfold Leaderboard UI Sound
     		}
     	}
-    }  
+    }
+    void OnTriggerEnter2D(Collider2D other){
+    
+    	if (other.tag == "Obstacle")
+    	{
+    		//End game
+    		playing=false;
+    		dead=true;
+    		
+    		//Submitting the online Highscore
+    		StartCoroutine("DieRoutine", 1.0f);
+    	}
+    }
+    IEnumerator DieRoutine(){
+    	//Get points
+    	int points = PlayerPrefs.GetInt("Points");
+    	//Submitting the online Highscore
+    	yield return leaderboard.SubmitScoreRoutine(points);
+    }
 }
