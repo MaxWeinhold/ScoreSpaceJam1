@@ -39,8 +39,8 @@ public class Player : MonoBehaviour
 	[Header("Leaderboard")]
 	[SerializeField] GameObject Panel;
 	
-	[Header("Bubbles")]
-	[SerializeField] private ParticleSystem ps;
+//	[Header("Bubbles")]
+//	[SerializeField] private ParticleSystem ps;
 	
     // Start is called before the first frame update
     void Start()
@@ -94,24 +94,24 @@ public class Player : MonoBehaviour
 	    	if(inputX<-0.1f){
 	    		PlayerPrefs.SetFloat("Speed",0.5f);
 	    		
-	    		var emission = ps.emission;
-       			emission.rateOverTime = 10;
+//	    		var emission = ps.emission;
+//       			emission.rateOverTime = 10;
 	    		//SFX-------------------------------------------------------------------------------
 	    		//Sound Speed adjustment (Maybe pitch)
 	    	}
 	    	else if(inputX>0.1f){
 	    		PlayerPrefs.SetFloat("Speed",2);
 	    		
-	    		var emission = ps.emission;
-       			emission.rateOverTime = 70;
+//	    		var emission = ps.emission;
+//       			emission.rateOverTime = 70;
 	    		//SFX-------------------------------------------------------------------------------
 	    		//Sound Speed adjustment (Maybe pitch)
 	    	}
 	    	else{
 	    		PlayerPrefs.SetFloat("Speed",1);
 	    		
-	    		var emission = ps.emission;
-       			emission.rateOverTime = 40;
+//	    		var emission = ps.emission;
+//       			emission.rateOverTime = 40;
 	    		//SFX-------------------------------------------------------------------------------
 	    		//Sound Speed adjustment (Maybe pitch)
 	    	}
