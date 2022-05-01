@@ -39,7 +39,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-    	playing=true;
+    	playing=false;
         lb = GameObject.Find("Leaderboard");
         leaderboard = lb.GetComponent<Leaderboard>();
     }
