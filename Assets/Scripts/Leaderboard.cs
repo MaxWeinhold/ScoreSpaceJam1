@@ -11,12 +11,6 @@ public class Leaderboard : MonoBehaviour
 	[SerializeField] Text playerNames;
 	[SerializeField] Text playerScores;
 	[SerializeField] int leaderboardID = 2710;
-	
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     public IEnumerator SubmitScoreRoutine(int scoreToUpload){
     	bool done = false;
@@ -39,29 +33,28 @@ public class Leaderboard : MonoBehaviour
     	bool done = false;
     	LootLockerSDKManager.GetScoreListMain(leaderboardID,10,0, (response) => {
     	                                      	
-    	                                      	if(response.success){
-	    	                                      	string tempPlayerNames = "Names\n";
-	    	                                      	string tempPlayerScores = "Scores\n";
-	    	                                      	LootLockerLeaderboardMember[] members = response.items;
-	    	                                      	for (int i = 0; i < members.Length;i++){
-	    	                                      		tempPlayerNames += members[i].rank + "";
-	    	                                      		if(members[i].player.name!=""){
-	    	                                      			tempPlayerNames += members[i].player.name;
-	    	                                      		}else{
-	    	                                      			tempPlayerNames += members[i].player.id;
-	    	                                      		}
-	    	                                      		tempPlayerScores += members[i].score+"\n";
-	    	                                      		tempPlayerNames += "\n";
-	    	                                      	}
-	    	                                      	done=true;
-	    	                                      	playerNames.text=tempPlayerNames;
-	    	                                      	playerScores.text=tempPlayerScores;
-    	                                      	}
-    	                                      	else{
-    	                                      	
-    	                                      		Debug.Log("Failed"+response.Error);
-    	                                      		done = true;
-    	                                      	}
+    		if(response.success){
+	    		string tempPlayerNames = "Names\n";
+	    		string tempPlayerScores = "Scores\n";
+	    		LootLockerLeaderboardMember[] members = response.items;
+	    		for (int i = 0; i < members.Length;i++){
+	    	    	tempPlayerNames += members[i].rank + "";
+	    	    	if(members[i].player.name!=""){
+	    	        	tempPlayerNames += members[i].player.name;
+	    	        }else{
+	    	        	tempPlayerNames += members[i].player.id;
+	    	        }
+	    	        tempPlayerScores += members[i].score+"\n";
+	    	        tempPlayerNames += "\n";
+	    	    }
+	    	    done=true;
+	    	    playerNames.text=tempPlayerNames;
+	    	    playerScores.text=tempPlayerScores;
+    	    }
+			else{
+	    		Debug.Log("Failed"+response.Error);
+    	    	done = true;
+    	    }
     	} );
     	yield return new WaitWhile(() => done == false);
     }

@@ -31,8 +31,6 @@ public class MagneticForce : MonoBehaviour
 	[SerializeField] bool Mine = false;
 	[SerializeField] bool Treasure = false;
 	
-	
-    // Start is called before the first frame update
     void Start()
     {
         submarine = GameObject.Find("Submarine");
@@ -46,29 +44,25 @@ public class MagneticForce : MonoBehaviour
         
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
     	if(player.playing==true){
+    		
+    		//Checking relative positions to submarine
 	    	distx = Mathf.Abs(submarine.transform.position.x - transform.position.x);
 	    	disty = Mathf.Abs(submarine.transform.position.y - transform.position.y);
 	    	
-	    	//check if bomb is below or above submarine
-	    	//if(submarine.transform.position.y > transform.position.y){subtop=false;}else{subtop=true;}
-	    	
-	    	//checks if prefab is below the magnet in an given angle
+	    	//checks if object is below the magnet in an given angle and range
 	    	if(distx<angle_of_attraction*disty ||  distx<range_of_attraction){
 	    		
 	    		Vector3 pos1 = transform.position;
 	    		Vector3 pos2 = transform.position;
 	    		if(player.top_positive==true){
-	    			//float relativeForce = 0;
-	    			//if((PS.top-PS.bottom)/2<disty){}
 	    			pos2.y+=speed*0.01f*((PS.top-PS.bottom)/2-disty) * PlayerPrefs.GetFloat("TimeSpped");
 		    	}else{
 		    		pos2.y-=speed*0.01f*((PS.top-PS.bottom)/2-disty) * PlayerPrefs.GetFloat("TimeSpped");
 		    	}
-	    		
+	    		//checks if object is in range (can not be repelled into space or ground)
 	    		if(pos2.y<PS.top && pos2.y>PS.bottom ){
 	    			pos1=pos2;
 	    		}
@@ -76,6 +70,7 @@ public class MagneticForce : MonoBehaviour
 	    	}
     	}
     	else{
+    		//If game is finished destory Object
     		Destroy(gameObject);
     	}
     }
@@ -83,33 +78,27 @@ public class MagneticForce : MonoBehaviour
     	
     	if(other.tag=="Player"){
     		if(Treasure==true){
+    			//Treasure is collected
     			int points = PlayerPrefs.GetInt("Points");
     			points+=1;
     			PlayerPrefs.SetInt("Points",points);
     			Destroy(gameObject);
     		}
     		if(Mine==true){
+    			//End game
     			player.playing=false;
     			player.dead=true;
-    			//Destroy(submarine);
-    			
     			
     			//Submitting the online Highscore
     			StartCoroutine("DieRoutine", 1.0f);
-    		//int points = PlayerPrefs.GetInt("Points");
-    		//yield return leaderboard.SubmitScoreRoutine(points);
     			
     		}
     	}
     }
     IEnumerator DieRoutine(){
+    	//Get points
     	int points = PlayerPrefs.GetInt("Points");
-    	print("test0");
+    	//Submitting the online Highscore
     	yield return leaderboard.SubmitScoreRoutine(points);
-    	print("test1");
-    	//yield return leaderboard.FetchTopHighscoresRoutine();
-    	print("test2");
-    	//yield return leaderboard.FetchTopHighscoresRoutine();
-    	player.dead=true;
     }
 }

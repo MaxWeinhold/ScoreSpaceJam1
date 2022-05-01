@@ -72,6 +72,8 @@ public class Player : MonoBehaviour
 	    	
 	    	//Input
 	    	float inputX = Input.GetAxis("Horizontal");
+	    	
+	    	//Adjust Speed depending on Input
 	    	if(inputX<-0.1f){
 	    		PlayerPrefs.SetFloat("Speed",0.5f);
 	    	}
@@ -84,7 +86,7 @@ public class Player : MonoBehaviour
 	    	
 	    	//Magent Swap Action-------------------------------------------------
 	    	
-	    	//Here come the animation
+	    	//Magnet Swap Animation
 	    	GetComponent<Animator>().SetBool("MagnetOnTop", top_positive);
 	    	
 	    	//input
@@ -92,27 +94,22 @@ public class Player : MonoBehaviour
 	    	
 	    	//swap the magnet when pressing spacebar
 	    	if(old_input<inputSwap){
+	    		
 	    		if(top_positive==true){
+	    			
 	    			top_positive=false;
 	    		}
 	    		else{
+	    			
 	    			top_positive=true;
 	    		}
 	    		old_input=1;
 	    	}
 	    	if(inputSwap==0){old_input=0;}
-	    	
-	    	//Placeholder. Later we will have an Animation for indicating visually that magnet is swaped
-	    	//magnet.GetComponent<SpriteRenderer>().flipY=top_positive;
-	    	
-    	
     	}
     	else{
-    		//print("sfewfewfewfewf");
+    		//Set Leaderboard active after death
     		Panel.SetActive(true);
     	}
-    	
-    }
-    
-    
+    }  
 }

@@ -6,12 +6,10 @@ using UnityEngine.UI;
 
 public class PlayerManager : MonoBehaviour
 {
-	
 	GameObject lb;
 	Leaderboard leaderboard;
 	[SerializeField] Text playerNameInputfield;
 	
-    // Start is called before the first frame update
     void Start()
     {
         lb = GameObject.Find("Leaderboard");
@@ -22,13 +20,13 @@ public class PlayerManager : MonoBehaviour
     
     public void SetPlayerName(){
     	LootLockerSDKManager.SetPlayerName(playerNameInputfield.text, (response)=>{
-    	                                   	if(response.success){
-    	                                   		Debug.Log("Successfully set player name");
-    	                                   	}
-    	                                   	else{
-    	                                   		Debug.Log("Could not set player name"+response.Error);
-    	                                   	}
-    	                                   });
+    		if(response.success){
+    	    	Debug.Log("Successfully set player name");
+    	    }
+    	    else{
+    	    	Debug.Log("Could not set player name"+response.Error);
+    	    }
+		});
     }
     
     IEnumerator SetupRoutine(){
@@ -51,12 +49,5 @@ public class PlayerManager : MonoBehaviour
     	    }
     	});
     	yield return new WaitWhile(() => done == false);
-    }
-    
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

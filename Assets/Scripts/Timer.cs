@@ -20,13 +20,20 @@ public class Timer : MonoBehaviour
     void Update()
     {
     	if(player.playing == true){
+    		//Count time
 	        timer += Time.deltaTime;
+	        //Save time
 	        PlayerPrefs.SetFloat("Time",timer);
+	        
+		  	//Adjust UI Text
 	        int minutes = Mathf.FloorToInt(timer / 60F);
 		  	int seconds = Mathf.FloorToInt(timer % 60F);
 		  	int milliseconds = Mathf.FloorToInt((timer * 100F) % 100F);
 		 	GetComponent<Text>().text = minutes.ToString ("00") + ":" + seconds.ToString ("00") + ":" + milliseconds.ToString("00");
     	}
-    	else{timer=0;}
+    	else{
+    		//Reset for game restart
+    		timer=0;
+    	}
     }
 }

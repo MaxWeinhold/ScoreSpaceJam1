@@ -7,7 +7,6 @@ public class UpdateLeaderboard : MonoBehaviour
 	GameObject lb;
 	Leaderboard leaderboard;
 	
-    // Start is called before the first frame update
     void Start()
     {
     	lb = GameObject.Find("Leaderboard");
@@ -19,11 +18,6 @@ public class UpdateLeaderboard : MonoBehaviour
         StartCoroutine("LeaderboardUpdate", 1.0f);
     }
     
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     IEnumerator LeaderboardUpdate(){
     	yield return leaderboard.FetchTopHighscoresRoutine();
     }

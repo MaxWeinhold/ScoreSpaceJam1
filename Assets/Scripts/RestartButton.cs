@@ -8,7 +8,6 @@ public class RestartButton : MonoBehaviour
 	Player player;
 	[SerializeField] GameObject Frame;
 	
-    // Start is called before the first frame update
     void Start()
     {
         submarine = GameObject.Find("Submarine");
@@ -18,9 +17,14 @@ public class RestartButton : MonoBehaviour
 
     public void BottonClicked () {
     	
+    	//Reset Points
     	PlayerPrefs.SetInt("Points",0);
+    	
+    	//Activate Player
     	player.dead=false;
     	player.playing=true;
+    	
+    	//Close Leaderboard Window
     	Frame.SetActive(false);
     }
 }

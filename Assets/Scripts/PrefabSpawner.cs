@@ -25,16 +25,18 @@ public class PrefabSpawner : MonoBehaviour
 	
 	[Header("Spawning Frequency")]
 	[Range(0, 10)]
+	[Tooltip("Set seconds after start not spawning anything.")]
 	[SerializeField] float start_time = 2;
 	[Range(0, 10)]
+	[Tooltip("Objects appear after at least seconds")]
 	[SerializeField] float minimum_time = 1;
 	[Range(1, 20)]
+	[Tooltip("Objects appear after seconds at the latest")]
 	[SerializeField] float maximum_time = 4;
 	float cooldown = 0;
 	
 	float timer = 0;
 	
-    // Start is called before the first frame update
     void Start()
     {
 		PlayerPrefs.SetInt("Points",0);
@@ -42,7 +44,6 @@ public class PrefabSpawner : MonoBehaviour
         player = submarine.GetComponent<Player>();
     }
 
-    // Update is called once per frame
     void Update()
     {
     	if(player.playing){
@@ -58,7 +59,7 @@ public class PrefabSpawner : MonoBehaviour
 	        	// set up the next cooldown time randomly
 	        	timer=0;
 	        	float r = Random.Range(minimum_time, maximum_time);
-	        	cooldown = r/PlayerPrefs.GetFloat("TimeSpped");
+	        	cooldown = r/PlayerPrefs.GetFloat("TimeSpped");//TimeSpeed will increase the pacing by time
 	        	
 	        	// Spawn seamines or treasures
 	        	Vector3 position = transform.position;
@@ -76,6 +77,7 @@ public class PrefabSpawner : MonoBehaviour
 	        }
 	    }
     	else{
+    		//Reset for game restarting
     		timer=0;
     		cooldown=0;
     	}
