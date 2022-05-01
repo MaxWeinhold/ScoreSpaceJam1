@@ -108,6 +108,7 @@ public class Player : MonoBehaviour
     	
     	}
     	else{
+    		print("sfewfewfewfewf");
     		Panel.SetActive(true);
     	}
     	

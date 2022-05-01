@@ -43,5 +43,9 @@ public class TileMovement : MonoBehaviour
         	
         	transform.position = transform.position + new Vector3(horizontalInput * speed * timespeed * movementSpeed * Time.deltaTime, 0, 0);
         }
+        else{
+        	timespeed = 1;
+        	PlayerPrefs.SetFloat("TimeSpped",timespeed);
+        }
     }
 }

@@ -27,5 +27,6 @@ public class Timer : MonoBehaviour
 		  	int milliseconds = Mathf.FloorToInt((timer * 100F) % 100F);
 		 	GetComponent<Text>().text = minutes.ToString ("00") + ":" + seconds.ToString ("00") + ":" + milliseconds.ToString("00");
     	}
+    	else{timer=0;}
     }
 }

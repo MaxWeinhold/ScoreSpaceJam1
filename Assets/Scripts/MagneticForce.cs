@@ -75,6 +75,9 @@ public class MagneticForce : MonoBehaviour
 	    		transform.position=pos1;
 	    	}
     	}
+    	else{
+    		Destroy(gameObject);
+    	}
     }
     void OnTriggerEnter2D(Collider2D other){
     	
@@ -87,6 +90,7 @@ public class MagneticForce : MonoBehaviour
     		}
     		if(Mine==true){
     			player.playing=false;
+    			player.dead=true;
     			//Destroy(submarine);
     			
     			
@@ -102,6 +106,6 @@ public class MagneticForce : MonoBehaviour
     	int points = PlayerPrefs.GetInt("Points");
     	yield return leaderboard.SubmitScoreRoutine(points);
     	yield return leaderboard.FetchTopHighscoresRoutine();
-    	player.dead=true;
+    	//player.dead=true;
     }
 }
