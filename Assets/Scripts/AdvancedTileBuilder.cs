@@ -20,7 +20,7 @@ public class AdvancedTileBuilder : MonoBehaviour
 	[SerializeField]
 	bool randomGeneration = false;
 	[SerializeField]
-	[Range(2, 5)]
+	[Range(2, 7)]
 	int randomNumbers = 2;
 	
 	[SerializeField]

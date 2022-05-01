@@ -463,6 +463,7 @@ Transform:
   - {fileID: 88753027}
   - {fileID: 242065101}
   - {fileID: 2075969861}
+  - {fileID: 847086195}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2951,13 +2952,140 @@ MonoBehaviour:
   start_time: 4
   minimum_time: 3
   maximum_time: 14
-  Floor1: {fileID: 11400000, guid: 68aa47a68ecac624d98b1786f731a168, type: 2}
-  TileChunkA:
-  - {fileID: 11400000, guid: 08eaee67a25bd6748bec5417dc1b29f4, type: 2}
-  - {fileID: 11400000, guid: 4a94e04cee8f98a439b9b65bdb03a6bc, type: 2}
-  - {fileID: 11400000, guid: eb4319d8df48c97428cd5da66a5e6398, type: 2}
   FGMap: {fileID: 1516294370}
   currentCell: {x: 24, y: 3, z: 0}
+  levels: 3
+  randomGeneration: 1
+  randomNumbers: 7
+  TileChunkA:
+  - {fileID: 11400000, guid: 903f8e0c1f0fea840bc766c0a81b9fd9, type: 2}
+  - {fileID: 11400000, guid: b9aa5003c6de90f418ec895965d32809, type: 2}
+  - {fileID: 11400000, guid: 7c78127a0b437b14ba1b0a671d95c52e, type: 2}
+  TileChunkA2:
+  - {fileID: 11400000, guid: 0a307442b9af3f24c98a594df584e3fb, type: 2}
+  - {fileID: 11400000, guid: c9ff648167efeb34ca943c0c80b4c8c0, type: 2}
+  - {fileID: 11400000, guid: 1eea1c2c42af9c347a15a1e0b18b1857, type: 2}
+  TileChunkA3:
+  - {fileID: 11400000, guid: 3e4e3cbe1a2487647b2a6ddbd4e6367b, type: 2}
+  - {fileID: 11400000, guid: f92e941da0a09694c9765a9eb2e35935, type: 2}
+  - {fileID: 11400000, guid: 522a8858a46b8824bb56457890d1c8f3, type: 2}
+  TileChunkA4: []
+  TileChunkA5: []
+  TileChunkA6: []
+  TileChunkA7: []
+  TileChunkA8: []
+  TileChunkA9: []
+  TileChunkA10: []
+  TileChunkA11: []
+  TileChunkA12: []
+  TileChunkB:
+  - {fileID: 11400000, guid: 68aa47a68ecac624d98b1786f731a168, type: 2}
+  TileChunkB2:
+  - {fileID: 0}
+  TileChunkB3:
+  - {fileID: 0}
+  TileChunkB4: []
+  TileChunkB5: []
+  TileChunkB6: []
+  TileChunkB7: []
+  TileChunkB8: []
+  TileChunkB9: []
+  TileChunkB10: []
+  TileChunkB11: []
+  TileChunkB12: []
+  TileChunkC: []
+  TileChunkC2: []
+  TileChunkC3: []
+  TileChunkC4: []
+  TileChunkC5: []
+  TileChunkC6: []
+  TileChunkC7: []
+  TileChunkC8: []
+  TileChunkC9: []
+  TileChunkC10: []
+  TileChunkC11: []
+  TileChunkC12: []
+  TileChunkD:
+  - {fileID: 11400000, guid: 9cac8090ee2a48949a183efea32e4851, type: 2}
+  - {fileID: 11400000, guid: 372f4133e36f6484880cf8d69d942e42, type: 2}
+  TileChunkD2:
+  - {fileID: 11400000, guid: ea219189401eb164c801975c912ee9c3, type: 2}
+  - {fileID: 11400000, guid: 35abe5d3a7369aa449645cde27ff7072, type: 2}
+  TileChunkD3:
+  - {fileID: 0}
+  - {fileID: 0}
+  TileChunkD4: []
+  TileChunkD5: []
+  TileChunkD6: []
+  TileChunkD7: []
+  TileChunkD8: []
+  TileChunkD9: []
+  TileChunkD10: []
+  TileChunkD11: []
+  TileChunkD12: []
+  TileChunkE:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 11400000, guid: 9cac8090ee2a48949a183efea32e4851, type: 2}
+  - {fileID: 11400000, guid: 372f4133e36f6484880cf8d69d942e42, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  TileChunkE2:
+  - {fileID: 11400000, guid: 68aa47a68ecac624d98b1786f731a168, type: 2}
+  - {fileID: 11400000, guid: 08eaee67a25bd6748bec5417dc1b29f4, type: 2}
+  - {fileID: 11400000, guid: 4a94e04cee8f98a439b9b65bdb03a6bc, type: 2}
+  - {fileID: 11400000, guid: 4a94e04cee8f98a439b9b65bdb03a6bc, type: 2}
+  - {fileID: 11400000, guid: 4a94e04cee8f98a439b9b65bdb03a6bc, type: 2}
+  - {fileID: 11400000, guid: 4a94e04cee8f98a439b9b65bdb03a6bc, type: 2}
+  - {fileID: 11400000, guid: 4a94e04cee8f98a439b9b65bdb03a6bc, type: 2}
+  - {fileID: 11400000, guid: 4a94e04cee8f98a439b9b65bdb03a6bc, type: 2}
+  - {fileID: 11400000, guid: 4a94e04cee8f98a439b9b65bdb03a6bc, type: 2}
+  - {fileID: 11400000, guid: 4a94e04cee8f98a439b9b65bdb03a6bc, type: 2}
+  - {fileID: 11400000, guid: eb4319d8df48c97428cd5da66a5e6398, type: 2}
+  - {fileID: 11400000, guid: 68aa47a68ecac624d98b1786f731a168, type: 2}
+  TileChunkE3:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 11400000, guid: ea219189401eb164c801975c912ee9c3, type: 2}
+  - {fileID: 11400000, guid: 35abe5d3a7369aa449645cde27ff7072, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  TileChunkE4: []
+  TileChunkE5: []
+  TileChunkE6: []
+  TileChunkE7: []
+  TileChunkE8: []
+  TileChunkE9: []
+  TileChunkE10: []
+  TileChunkE11: []
+  TileChunkE12: []
+  TileChunkF:
+  - {fileID: 11400000, guid: 479ff5f89a3dfc745ac4e8b5bac0af2c, type: 2}
+  TileChunkF2:
+  - {fileID: 11400000, guid: a5e2e2995690c164695c05aedefb4453, type: 2}
+  TileChunkF3:
+  - {fileID: 11400000, guid: fcc4a6f35fc3a924083202125f2a913d, type: 2}
+  TileChunkF4: []
+  TileChunkF5: []
+  TileChunkF6: []
+  TileChunkF7: []
+  TileChunkF8: []
+  TileChunkF9: []
+  TileChunkF10: []
+  TileChunkF11: []
+  TileChunkF12: []
 --- !u!1 &197624303
 GameObject:
   m_ObjectHideFlags: 0
@@ -9232,6 +9360,162 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 806288096}
   m_CullTransparentMesh: 0
+--- !u!1 &847086194
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 847086195}
+  - component: {fileID: 847086196}
+  m_Layer: 0
+  m_Name: MiddlegroundGeneration
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &847086195
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 847086194}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 135535445}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &847086196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 847086194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6027a88af6188949a86a25860423e37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FGMap: {fileID: 1704317078}
+  currentCell: {x: 25, y: 2, z: 0}
+  levels: 4
+  randomGeneration: 0
+  randomNumbers: 2
+  TileChunkA:
+  - {fileID: 0}
+  - {fileID: 11400000, guid: d5f47817c37327b4f8bd4ac352a9287a, type: 2}
+  - {fileID: 11400000, guid: 1b8132c10d5cbe3469ad2a7a3d959bd5, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 11400000, guid: 4c0b49b9153d67d43af048369fe8e169, type: 2}
+  - {fileID: 0}
+  TileChunkA2:
+  - {fileID: 11400000, guid: 296b1e0f5460fe047b194341d463d842, type: 2}
+  - {fileID: 11400000, guid: d394507a675561740b826eb8356526aa, type: 2}
+  - {fileID: 11400000, guid: 5cff4f3db7b1ab3438d031e5c8537e21, type: 2}
+  - {fileID: 11400000, guid: bea0355434545224486c36f9ae5b94ac, type: 2}
+  - {fileID: 11400000, guid: c91090c83a2f5ba438617ae34187e2d5, type: 2}
+  - {fileID: 11400000, guid: 6a781892484e5494f8673a2ab5678e37, type: 2}
+  - {fileID: 11400000, guid: 9e867d5ea908d1b4996b01d3b857ad78, type: 2}
+  - {fileID: 11400000, guid: 774f2a29755fef241a810279ab44c5f2, type: 2}
+  - {fileID: 11400000, guid: b5658283520de0e4aad7f86fc76d791c, type: 2}
+  TileChunkA3:
+  - {fileID: 11400000, guid: 6460362705ed673478b093a45f52dab9, type: 2}
+  - {fileID: 11400000, guid: f3b7b7c2445e8c04690b1e6407285757, type: 2}
+  - {fileID: 11400000, guid: 91c5241dcf537344384676c05fb6d366, type: 2}
+  - {fileID: 11400000, guid: 51da1cdcbdd51914fb9c3822a5acec34, type: 2}
+  - {fileID: 11400000, guid: 877d1612c3195314bb2b3ec5159da3ed, type: 2}
+  - {fileID: 11400000, guid: 977b632261660bb468a84aca0a8bcbdd, type: 2}
+  - {fileID: 11400000, guid: b23cf739754bde74f9a46cb4b7ec134a, type: 2}
+  - {fileID: 11400000, guid: dd3251ad429e6d54284d646c66e78acd, type: 2}
+  - {fileID: 11400000, guid: f3964eba2f60c0545a2ddf784b0894f4, type: 2}
+  TileChunkA4:
+  - {fileID: 11400000, guid: 91a5802242d489949b2051299313669e, type: 2}
+  - {fileID: 11400000, guid: 992902cb2e6eb7e4587c414c58230187, type: 2}
+  - {fileID: 11400000, guid: 6bc7664c764677846898778a341d8872, type: 2}
+  - {fileID: 11400000, guid: 61be90607fe1541479e4fd994e7d0679, type: 2}
+  - {fileID: 11400000, guid: 086bb4ab6185e13498392b545e1e75f7, type: 2}
+  - {fileID: 11400000, guid: 8490d973711f9d944b419364d2754bfc, type: 2}
+  - {fileID: 11400000, guid: e5a0dd6bcbf603b4588adaeb2223acf1, type: 2}
+  - {fileID: 11400000, guid: 7387f84071180eb41a8459dea00bd215, type: 2}
+  - {fileID: 11400000, guid: 547df231609936e42ab5218ef777ea03, type: 2}
+  TileChunkA5: []
+  TileChunkA6: []
+  TileChunkA7: []
+  TileChunkA8: []
+  TileChunkA9: []
+  TileChunkA10: []
+  TileChunkA11: []
+  TileChunkA12: []
+  TileChunkB: []
+  TileChunkB2: []
+  TileChunkB3: []
+  TileChunkB4: []
+  TileChunkB5: []
+  TileChunkB6: []
+  TileChunkB7: []
+  TileChunkB8: []
+  TileChunkB9: []
+  TileChunkB10: []
+  TileChunkB11: []
+  TileChunkB12: []
+  TileChunkC: []
+  TileChunkC2: []
+  TileChunkC3: []
+  TileChunkC4: []
+  TileChunkC5: []
+  TileChunkC6: []
+  TileChunkC7: []
+  TileChunkC8: []
+  TileChunkC9: []
+  TileChunkC10: []
+  TileChunkC11: []
+  TileChunkC12: []
+  TileChunkD: []
+  TileChunkD2: []
+  TileChunkD3: []
+  TileChunkD4: []
+  TileChunkD5: []
+  TileChunkD6: []
+  TileChunkD7: []
+  TileChunkD8: []
+  TileChunkD9: []
+  TileChunkD10: []
+  TileChunkD11: []
+  TileChunkD12: []
+  TileChunkE: []
+  TileChunkE2: []
+  TileChunkE3: []
+  TileChunkE4: []
+  TileChunkE5: []
+  TileChunkE6: []
+  TileChunkE7: []
+  TileChunkE8: []
+  TileChunkE9: []
+  TileChunkE10: []
+  TileChunkE11: []
+  TileChunkE12: []
+  TileChunkF: []
+  TileChunkF2: []
+  TileChunkF3: []
+  TileChunkF4: []
+  TileChunkF5: []
+  TileChunkF6: []
+  TileChunkF7: []
+  TileChunkF8: []
+  TileChunkF9: []
+  TileChunkF10: []
+  TileChunkF11: []
+  TileChunkF12: []
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
