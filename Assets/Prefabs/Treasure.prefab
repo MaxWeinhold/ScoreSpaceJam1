@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 459c84a47a0e6dd48a386372433dd898, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 4
+  movementSpeed: 5
   timespeed: 1
   max_timespeed: 10
 --- !u!114 &4181412016524912828
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   angle_of_attraction: 1.5
   range_of_attraction: 3
-  speed: 3.5
+  speed: 5
   Mine: 0
   Treasure: 1
 --- !u!95 &8890561937752690860

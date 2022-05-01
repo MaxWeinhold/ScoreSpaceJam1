@@ -10,7 +10,7 @@ public class TileMovement : MonoBehaviour
 	private float movementSpeed = 5f;
  	float timer;
  	public float timespeed = 1;
-	private int time_relation = 250;
+	private int time_relation = 100;
  	[SerializeField]
 	private int max_timespeed = 10;
 	
