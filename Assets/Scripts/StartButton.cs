@@ -26,6 +26,9 @@ public class StartButton : MonoBehaviour
     }
     
     public void BottonClicked () {
+    	
+    	//SFX-------------------------------------------------------------------------------
+    	//ButtonClick here
     
     	if(clicks==0){
     		
@@ -46,10 +49,18 @@ public class StartButton : MonoBehaviour
     			Frame.SetActive(false);
     		}
     		else if(userID.Length==0){
+    			
+    			//SFX-------------------------------------------------------------------------------
+    			//Error Sound here
+    			
     			//Wrong Input
     			warning_text.text="You need a name for your highscore!";
     		}
     		else{
+    			
+    			//SFX-------------------------------------------------------------------------------
+    			//Error Sound here
+    			
     			//Wrong Input
     			warning_text.text="Your name is longer than 10 characters!";
     		}

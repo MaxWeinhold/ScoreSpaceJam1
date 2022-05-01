@@ -17,6 +17,9 @@ public class RestartButton : MonoBehaviour
 
     public void BottonClicked () {
     	
+    	//SFX-------------------------------------------------------------------------------
+    	//ButtonClick here
+    	
     	//Reset Points
     	PlayerPrefs.SetInt("Points",0);
     	

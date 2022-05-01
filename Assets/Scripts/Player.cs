@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
 {
 	GameObject lb;
 	Leaderboard leaderboard;
+	bool leaderboardui=false;
 	public bool playing;
 	public bool dead=false;
 	
@@ -50,7 +51,10 @@ public class Player : MonoBehaviour
     	
     	if(dead==false){
     		
-	    	//Vertical Movement Section------------------------------------------
+    		
+    		leaderboardui=false;
+    		
+	    	//Vertical Movement Section____________________________
 	    	
 	    	//Input
 	    	float inputY = Input.GetAxis("Vertical");
@@ -65,10 +69,18 @@ public class Player : MonoBehaviour
 	    		pos1=pos2;
 	    	}
 	    	
+	    	//SFX-------------------------------------------------------------------------------
+	    	if(inputY<-0.1f){
+	    		//Sound for ascending submarine
+	    	}
+	    	else if((inputY>0.1f)){
+	    		//Sound for diving submarine
+	    	}
+	    	
 	    	//update position
 	    	transform.position=pos1;
 	   
-	    	//Horizontally Movement Section--------------------------------------
+	    	//Horizontally Movement Section____________________
 	    	
 	    	//Input
 	    	float inputX = Input.GetAxis("Horizontal");
@@ -76,21 +88,30 @@ public class Player : MonoBehaviour
 	    	//Adjust Speed depending on Input
 	    	if(inputX<-0.1f){
 	    		PlayerPrefs.SetFloat("Speed",0.5f);
+	    		//SFX-------------------------------------------------------------------------------
+	    		//Sound Speed adjustment (Maybe pitch)
 	    	}
 	    	else if(inputX>0.1f){
 	    		PlayerPrefs.SetFloat("Speed",2);
+	    		//SFX-------------------------------------------------------------------------------
+	    		//Sound Speed adjustment (Maybe pitch)
 	    	}
 	    	else{
 	    		PlayerPrefs.SetFloat("Speed",1);
+	    		//SFX-------------------------------------------------------------------------------
+	    		//Sound Speed adjustment (Maybe pitch)
 	    	}
 	    	
-	    	//Magent Swap Action-------------------------------------------------
+	    	//Magent Swap Action____________________
 	    	
 	    	//Magnet Swap Animation
 	    	GetComponent<Animator>().SetBool("MagnetOnTop", top_positive);
 	    	
 	    	//input
 	    	float inputSwap = Input.GetAxis("Jump");
+	    	
+	    	//SFX-------------------------------------------------------------------------------
+	    	//Sound for magnet Swaping, but we will wait, because we may change that horsehoe magnet anyway!
 	    	
 	    	//swap the magnet when pressing spacebar
 	    	if(old_input<inputSwap){
@@ -110,6 +131,12 @@ public class Player : MonoBehaviour
     	else{
     		//Set Leaderboard active after death
     		Panel.SetActive(true);
+    		
+    		if(leaderboardui==false){
+    			leaderboardui=true;
+    			//SFX----------------------------------------------------------------------------------------
+    			//Unfold Leaderboard UI Sound
+    		}
     	}
     }  
 }

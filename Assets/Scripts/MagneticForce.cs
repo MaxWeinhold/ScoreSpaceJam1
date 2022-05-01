@@ -82,9 +82,17 @@ public class MagneticForce : MonoBehaviour
     			int points = PlayerPrefs.GetInt("Points");
     			points+=1;
     			PlayerPrefs.SetInt("Points",points);
+    			
+    			//SFX--------------------------------------------------
+    			//Coin Sound (But this object will be terminated, dont add Sound to this object)
+    			
     			Destroy(gameObject);
     		}
     		if(Mine==true){
+    			
+    			//SFX--------------------------------------------------
+    			//Explosion Sound (But this object will be terminated, dont add Sound to this object)
+    			
     			//End game
     			player.playing=false;
     			player.dead=true;
