@@ -27,8 +27,7 @@ public class StartButton : MonoBehaviour
     
     public void BottonClicked () {
     	
-    	//SFX-------------------------------------------------------------------------------
-    	//ButtonClick here
+        
     
     	if(clicks==0){
     		
@@ -36,7 +35,9 @@ public class StartButton : MonoBehaviour
     		clicks++;
     		Panel1.SetActive(false);
     		Panel2.SetActive(true);
-    	}
+
+            FMODUnity.RuntimeManager.PlayOneShotAttached("event:/SFX/UI/Click", gameObject);
+        }
     	else if(clicks==1){
     		//Get Name from Inputfield
     		string userID = Username_field.text.ToString();
@@ -48,6 +49,7 @@ public class StartButton : MonoBehaviour
     			player.playing=true;
     			Frame.SetActive(false);
 
+                FMODUnity.RuntimeManager.PlayOneShotAttached("event:/SFX/UI/Click", gameObject);
                 AudioPlayer.instance.PlaySubBubbles();
     		}
     		else if(userID.Length==0){

@@ -16,9 +16,9 @@ public class RestartButton : MonoBehaviour
     }
 
     public void BottonClicked () {
-    	
-    	//SFX-------------------------------------------------------------------------------
-    	//ButtonClick here
+
+
+        FMODUnity.RuntimeManager.PlayOneShotAttached("event:/SFX/UI/Click", gameObject);
     	
     	//Reset Points
     	PlayerPrefs.SetInt("Points",0);
