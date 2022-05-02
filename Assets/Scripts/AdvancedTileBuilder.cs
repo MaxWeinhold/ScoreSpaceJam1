@@ -380,7 +380,8 @@ public class AdvancedTileBuilder : MonoBehaviour
     			}
     			currentCell.x += 1;
     		}
-    		createFloor=false;
+    		if(FGposDelta<-0.501f){createFloor=false;}
+    		//createFloor=false;
     	}
     	else{createFloor=true;}
     }

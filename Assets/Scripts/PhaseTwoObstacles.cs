@@ -372,7 +372,7 @@ public class PhaseTwoObstacles : MonoBehaviour
     			}
     			currentCell.x +=1;
     		}
-    		createFloor=false;
+    		if(FGposDelta<-0.501f){createFloor=false;}
     	}
     	else{createFloor=true;}
     	

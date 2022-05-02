@@ -26,7 +26,7 @@ public class TileBuilder : MonoBehaviour
     	int FGpos_i = (int) FGpos;
     	float FGposDelta = FGpos-FGpos_i;
     	
-    	if(FGposDelta<-0.5){
+    	if(FGposDelta<-0.5f){
     		if(createFloor==true){
     			Vector3Int Cell = currentCell;
     			Cell.x +=1;
@@ -35,7 +35,8 @@ public class TileBuilder : MonoBehaviour
     				FGMap.SetTile(currentCell, Floor1);
     			}
     		}
-    		createFloor=false;
+    		if(FGposDelta<-0.501f){createFloor=false;}
+    		
     	}
     	else{createFloor=true;}
     }

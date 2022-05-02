@@ -33,7 +33,7 @@ public class TileDestroyer : MonoBehaviour
     				FGMap.SetTile(cy, null);
     			}
     		}
-    		createFloor=false;
+    		if(FGposDelta<-0.5001f){createFloor=false;}
     	}
     	else{createFloor=true;}
     }
