@@ -12,6 +12,7 @@ public class MagneticForce : MonoBehaviour
 	
 	GameObject lb;
 	Leaderboard leaderboard;
+	private Vector3 _startPosition;
 	
 	float disty;
 	float distx;

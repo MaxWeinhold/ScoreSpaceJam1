@@ -240,6 +240,8 @@ MonoBehaviour:
   angle_of_attraction: 1.5
   range_of_attraction: 3
   speed: 5
+  frequency: 8
+  amplitude: 3
   Mine: 0
   Treasure: 1
 --- !u!95 &8890561937752690860

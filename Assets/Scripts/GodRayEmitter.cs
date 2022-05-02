@@ -20,6 +20,9 @@ public class GodRayEmitter : MonoBehaviour
 	[Range(1, 20)]
 	[Tooltip("Objects appear after seconds at the latest")]
 	[SerializeField] float maximum_time = 4;
+	
+	public bool bubbles = false;
+	
 	float cooldown = 0;
 	float timer = 0;
 	
@@ -48,7 +51,9 @@ public class GodRayEmitter : MonoBehaviour
 	        	// Spawn seamines or treasures
 	        	Vector3 position = transform.position;
 	        	//Quaternion rotation = new Quaternion(0, 0, 0, -47);
-	        	Quaternion rotation = Quaternion.Euler(0, 0, -47);
+	        	Quaternion rotation = Quaternion.Euler(-90, 0, 0);
+	        	if(bubbles){rotation = Quaternion.Euler(-90, 0, 0);}
+	        	else{rotation = Quaternion.Euler(0, 0, -47);}
 	        	Instantiate(Light1, position, rotation);
 	        
 	        }
