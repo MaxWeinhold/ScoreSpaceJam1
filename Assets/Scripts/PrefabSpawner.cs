@@ -16,7 +16,7 @@ public class PrefabSpawner : MonoBehaviour
 	
 	[Tooltip("Top spawn point.")]
 	[SerializeField]
-	[Range(8, 10)]
+	[Range(8, 12)]
 	public float top = 8.5f;
 	
 	[Header("Spawning Objects")]
@@ -46,34 +46,37 @@ public class PrefabSpawner : MonoBehaviour
     void Update()
     {
     	if(player.playing){
-	        timer += Time.deltaTime;
-	        
-	        // for the start take the start_time as cooldown
-	        if(cooldown==0){
-	        	cooldown=start_time;
-	        }
-	        
-	        //cooldown is down, next prefab will be spawned
-	        if(timer>cooldown){
-	        	// set up the next cooldown time randomly
-	        	timer=0;
-	        	float r = Random.Range(minimum_time, maximum_time);
-	        	cooldown = r/PlayerPrefs.GetFloat("TimeSpped");//TimeSpeed will increase the pacing by time
-	        	
-	        	// Spawn seamines or treasures
-	        	Vector3 position = transform.position;
-	        	
-	        	//randomly select wether object is above or below submarine
-	        	int r2 = Random.Range(0, 2);
-	        	if(r2==0){position.y=bottom;}
-	        	else{position.y=top;}
-	        	Quaternion rotation = new Quaternion(0, 0, 0, 0);
-	        	
-	        	//randomly select treasure or seamine
-	        	int r3 = Random.Range(0, 2);
-	        	if(r3==0){Instantiate(SeaMine, position, rotation);}
-	        	else{Instantiate(Treasure, position, rotation);}
-	        }
+    		
+    		if(PlayerPrefs.GetInt("Phase")==0 || PlayerPrefs.GetInt("Phase")==1){
+		        timer += Time.deltaTime;
+		        
+		        // for the start take the start_time as cooldown
+		        if(cooldown==0){
+		        	cooldown=start_time;
+		        }
+		        
+		        //cooldown is down, next prefab will be spawned
+		        if(timer>cooldown){
+		        	// set up the next cooldown time randomly
+		        	timer=0;
+		        	float r = Random.Range(minimum_time, maximum_time);
+		        	cooldown = r/PlayerPrefs.GetFloat("TimeSpped");//TimeSpeed will increase the pacing by time
+		        	
+		        	// Spawn seamines or treasures
+		        	Vector3 position = transform.position;
+		        	
+		        	//randomly select wether object is above or below submarine
+		        	int r2 = Random.Range(0, 2);
+		        	if(r2==0){position.y=bottom;}
+		        	else{position.y=top;}
+		        	Quaternion rotation = new Quaternion(0, 0, 0, 0);
+		        	
+		        	//randomly select treasure or seamine
+		        	int r3 = Random.Range(0, 2);
+		        	if(r3==0){Instantiate(SeaMine, position, rotation);}
+		        	else{Instantiate(Treasure, position, rotation);}
+		        }
+	    	}
 	    }
     	else{
     		//Reset for game restarting

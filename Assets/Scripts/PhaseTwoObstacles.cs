@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class TileObstacles : MonoBehaviour
+public class PhaseTwoObstacles : MonoBehaviour
 {
+	
 	GameObject submarine;
 	Player player;
 	
@@ -202,17 +203,23 @@ public class TileObstacles : MonoBehaviour
 	[SerializeField]
 	Tile [] TileChunkF12;
 	
+	bool bottom = false;
+	
     // Start is called before the first frame update
     void Start()
     {
 		submarine = GameObject.Find("Submarine");
         player = submarine.GetComponent<Player>();
-        //FGMap.SetTile(currentCell, Floor1);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+
+    	
+    	
+    	
     	float FGpos = FGMap.transform.position.x;
     	int FGpos_i = (int) FGpos;
     	float FGposDelta = FGpos-FGpos_i;
@@ -221,9 +228,11 @@ public class TileObstacles : MonoBehaviour
     		if(createFloor==true){
     			Vector3Int Cell = currentCell;
     			Cell.x +=1;
-    			if(FGMap.HasTile(Cell)==false && now_obstacle == true && PlayerPrefs.GetInt("Phase")==0){
+    			if(FGMap.HasTile(Cell)==false && now_obstacle == true && PlayerPrefs.GetInt("Phase")==1){
     				Vector3Int C = currentCell;
-    				int r2 = Random.Range(-2, 6);
+    				//int r2 = Random.Range(-2, 6);
+    				int r2 = 0;
+    				if(bottom){r2=6;}else{r2=18;}
     				C.y +=r2;
     				
     				int r = Random.Range(1, randomNumbers);
@@ -369,7 +378,7 @@ public class TileObstacles : MonoBehaviour
     	
         if(player.playing){
 	        timer += Time.deltaTime;
-	        if(PlayerPrefs.GetInt("Phase")==1){timer=0;}
+	        if(PlayerPrefs.GetInt("Phase")==0){timer=0;}
 	        
 	        // for the start take the start_time as cooldown
 	        if(cooldown==0){
@@ -381,7 +390,10 @@ public class TileObstacles : MonoBehaviour
 	        	// set up the next cooldown time randomly
 	        	timer=0;
 	        	float r = Random.Range(minimum_time, maximum_time);
-	        	cooldown = r/PlayerPrefs.GetFloat("TimeSpped");//TimeSpeed will increase the pacing by time
+	        	cooldown = r;
+	        	
+	        	if(bottom){bottom=false;}
+	        	else{bottom=true;}
 	        	
 	        	now_obstacle = true;
 	        }
@@ -392,5 +404,7 @@ public class TileObstacles : MonoBehaviour
     		cooldown=0;
     		FGMap.ClearAllTiles();
     	}
+    	
+    	
     }
 }
