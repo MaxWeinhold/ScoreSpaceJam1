@@ -32,6 +32,8 @@ public class MagneticForce : MonoBehaviour
 	[SerializeField] bool Mine = false;
 	[SerializeField] bool Treasure = false;
 	
+	public GameObject particles;
+	
     void Start()
     {
         submarine = GameObject.Find("Submarine");
@@ -87,7 +89,11 @@ public class MagneticForce : MonoBehaviour
     			PlayerPrefs.SetInt("Points",points);
 
                 FMODUnity.RuntimeManager.PlayOneShotAttached("event:/SFX/UI/Coin", gameObject);
-    			
+                
+                Vector3 position = transform.position;
+                Quaternion rotation = new Quaternion(0, 0, 0, 0);
+				Instantiate(particles, position, rotation);
+	                
     			Destroy(gameObject);
     		}
     		if(Mine==true){

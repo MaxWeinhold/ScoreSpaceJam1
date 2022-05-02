@@ -240,10 +240,9 @@ MonoBehaviour:
   angle_of_attraction: 1.5
   range_of_attraction: 3
   speed: 5
-  frequency: 8
-  amplitude: 3
   Mine: 0
   Treasure: 1
+  particles: {fileID: 3627265942352014502, guid: c37648c81a2b3fa42b23d3d500491af1, type: 3}
 --- !u!95 &8890561937752690860
 Animator:
   serializedVersion: 3

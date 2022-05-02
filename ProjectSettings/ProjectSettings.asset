@@ -12,7 +12,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: Alios, Sapient and Comic and Sons
+  companyName: Alios, Comic and Sons and Sapient
   productName: Treasure Hunter XXL
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
