@@ -65,7 +65,7 @@ public class PrefabSpawner : MonoBehaviour
 		        	// set up the next cooldown time randomly
 		        	timer=0;
 		        	float r = Random.Range(minimum_time, maximum_time);
-		        	cooldown = r*((20-PlayerPrefs.GetFloat("TimeSpped"))/20);//TimeSpeed will increase the pacing by time
+		        	cooldown = r*((15-PlayerPrefs.GetFloat("TimeSpped"))/15);//TimeSpeed will increase the pacing by time
 		        	
 		        	// Spawn seamines or treasures
 		        	Vector3 position = transform.position;

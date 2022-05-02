@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TileMovement : MonoBehaviour
+public class Fish : MonoBehaviour
 {
 	GameObject submarine;
 	Player player;
@@ -10,7 +10,7 @@ public class TileMovement : MonoBehaviour
 	private float movementSpeed = 5f;
  	float timer;
  	public float timespeed = 1;
-	private int time_relation = 50;
+	private int time_relation = 100;
  	[SerializeField]
 	private int max_timespeed = 10;
 	
@@ -19,6 +19,7 @@ public class TileMovement : MonoBehaviour
     {
         submarine = GameObject.Find("Submarine");
         player = submarine.GetComponent<Player>();
+        
     }
 
     // Update is called once per frame
@@ -47,5 +48,6 @@ public class TileMovement : MonoBehaviour
         	timespeed = 1;
         	PlayerPrefs.SetFloat("TimeSpped",timespeed);
         }
+        
     }
 }

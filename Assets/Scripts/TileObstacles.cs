@@ -381,7 +381,7 @@ public class TileObstacles : MonoBehaviour
 	        	// set up the next cooldown time randomly
 	        	timer=0;
 	        	float r = Random.Range(minimum_time, maximum_time);
-	        	cooldown = r/PlayerPrefs.GetFloat("TimeSpped");//TimeSpeed will increase the pacing by time
+	        	cooldown = r*((18-PlayerPrefs.GetFloat("TimeSpped"))/18);//TimeSpeed will increase the pacing by time
 	        	
 	        	now_obstacle = true;
 	        }
