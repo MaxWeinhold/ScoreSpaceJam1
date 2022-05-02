@@ -136,11 +136,16 @@ public class Player : MonoBehaviour
 	    		if(top_positive==true){
 	    			
 	    			top_positive=false;
-	    		}
+
+					FMODUnity.RuntimeManager.PlayOneShotAttached("event:/SFX/Submarine/Submarine_Magnet_Up", gameObject);
+				}
 	    		else{
 	    			
 	    			top_positive=true;
-	    		}
+
+					FMODUnity.RuntimeManager.PlayOneShotAttached("event:/SFX/Submarine/Submarine_Magnet_Down", gameObject);
+
+				}
 	    		old_input=1;
 	    	}
 	    	if(inputSwap==0){old_input=0;}
