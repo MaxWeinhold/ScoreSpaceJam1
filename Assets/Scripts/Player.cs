@@ -39,6 +39,9 @@ public class Player : MonoBehaviour
 	[Header("Leaderboard")]
 	[SerializeField] GameObject Panel;
 	
+	[Header("Others")]
+	[SerializeField] GameObject Glitter;
+	
 //	[Header("Bubbles")]
 //	[SerializeField] private ParticleSystem ps;
 	
@@ -166,6 +169,9 @@ public class Player : MonoBehaviour
     		
     		//Submitting the online Highscore
     		StartCoroutine("DieRoutine", 1.0f);
+    	}
+    	if (other.tag == "Treasure"){
+    		//Glitter.GetComponent<ParticleSystem>().Play();
     	}
     }
     IEnumerator DieRoutine(){
