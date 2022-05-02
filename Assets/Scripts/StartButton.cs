@@ -51,6 +51,7 @@ public class StartButton : MonoBehaviour
 
                 FMODUnity.RuntimeManager.PlayOneShotAttached("event:/SFX/UI/Click", gameObject);
                 AudioPlayer.instance.PlaySubBubbles();
+                AudioPlayer.instance.PlayMainMusic();
     		}
     		else if(userID.Length==0){
 
