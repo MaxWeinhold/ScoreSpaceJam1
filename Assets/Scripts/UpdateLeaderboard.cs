@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class UpdateLeaderboard : MonoBehaviour
 {
-	GameObject lb;
-	Leaderboard leaderboard;
+	//GameObject lb;
+	[SerializeField]Leaderboard leaderboard;
 	
     void Start()
     {
-    	lb = GameObject.Find("Leaderboard");
-        leaderboard = lb.GetComponent<Leaderboard>();
+//    	lb = GameObject.Find("Leaderboard");
+//        leaderboard = lb.GetComponent<Leaderboard>();
     }
 
     void OnEnable()
