@@ -10465,13 +10465,16 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Collect as many Coins as possible! But be aware of sea mines. Use your
-    magnet to collect what you need and repel what you don''t.
+  m_Text: 'You can only play in full screen!
 
 
-    Use SPACE to
-    switch the magnet up and down. Use WS for vertical movement and AD for speed
-    control.'
+    Collect as many Coins as possible!
+    But be aware of sea mines. Use your magnet to collect what you need and repel
+    what you don''t.
+
+
+    Use SPACE to switch the magnet up and down. Use WS for
+    vertical movement and AD for speed control.'
 --- !u!222 &1247108001
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11832,7 +11835,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1691489150
 RectTransform:
   m_ObjectHideFlags: 0
