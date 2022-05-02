@@ -53,17 +53,16 @@ public class StartButton : MonoBehaviour
                 AudioPlayer.instance.PlaySubBubbles();
     		}
     		else if(userID.Length==0){
-    			
-    			//SFX-------------------------------------------------------------------------------
-    			//Error Sound here
-    			
-    			//Wrong Input
-    			warning_text.text="You need a name for your highscore!";
+
+                FMODUnity.RuntimeManager.PlayOneShotAttached("event:/SFX/UI/Error", gameObject);
+
+                //Wrong Input
+                warning_text.text="You need a name for your highscore!";
     		}
     		else{
-    			
-    			//SFX-------------------------------------------------------------------------------
-    			//Error Sound here
+
+
+                FMODUnity.RuntimeManager.PlayOneShotAttached("event:/SFX/UI/Error", gameObject);
     			
     			//Wrong Input
     			warning_text.text="Your name is longer than 10 characters!";

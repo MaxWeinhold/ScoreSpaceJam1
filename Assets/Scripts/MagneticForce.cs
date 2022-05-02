@@ -85,9 +85,8 @@ public class MagneticForce : MonoBehaviour
     			int points = PlayerPrefs.GetInt("Points");
     			points+=1;
     			PlayerPrefs.SetInt("Points",points);
-    			
-    			//SFX--------------------------------------------------
-    			//Coin Sound (But this object will be terminated, dont add Sound to this object)
+
+                FMODUnity.RuntimeManager.PlayOneShotAttached("event:/SFX/UI/Coin", gameObject);
     			
     			Destroy(gameObject);
     		}
