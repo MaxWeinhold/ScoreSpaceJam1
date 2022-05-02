@@ -38,7 +38,7 @@ public class Leaderboard : MonoBehaviour
 	    		string tempPlayerScores = "Scores\n";
 	    		LootLockerLeaderboardMember[] members = response.items;
 	    		for (int i = 0; i < members.Length;i++){
-	    	    	tempPlayerNames += members[i].rank + "";
+	    	    	tempPlayerNames += members[i].rank + ": ";
 	    	    	if(members[i].player.name!=""){
 	    	        	tempPlayerNames += members[i].player.name;
 	    	        }else{
@@ -50,6 +50,8 @@ public class Leaderboard : MonoBehaviour
 	    	    done=true;
 	    	    playerNames.text=tempPlayerNames;
 	    	    playerScores.text=tempPlayerScores;
+	    	    
+	    	    
     	    }
 			else{
 	    		Debug.Log("Failed"+response.Error);

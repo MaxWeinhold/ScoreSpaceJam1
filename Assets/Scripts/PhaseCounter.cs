@@ -6,6 +6,7 @@ public class PhaseCounter : MonoBehaviour
 {
 	GameObject submarine;
 	Player player;
+	bool beginning = true;
 	
 	int Phase;
 	
@@ -25,6 +26,7 @@ public class PhaseCounter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+    	int Phase = -1;
 		submarine = GameObject.Find("Submarine");
         player = submarine.GetComponent<Player>();
     }
@@ -44,13 +46,22 @@ public class PhaseCounter : MonoBehaviour
 	        	// set up the next cooldown time randomly
 	        	timer=0;
 	        	float r = Random.Range(minimum_time, maximum_time);
-	        	cooldown = r/PlayerPrefs.GetFloat("TimeSpped");//TimeSpeed will increase the pacing by time
-	        	Phase++;
+	        	cooldown = r;//TimeSpeed will increase the pacing by time
+	        	
+	        	if(beginning){beginning=false;}else{
+	        		Phase++;
+	        	}
+	        	
+	        	
 	        	if(Phase>1){Phase=0;}
 	        	PlayerPrefs.SetInt("Phase",Phase);
+	        	//print("TestYo");
 	        }
     		
     	}
-    	else{Phase=0;}
+    	else{
+    		Phase=0;
+    		beginning=true;
+    	}
     }
 }

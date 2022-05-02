@@ -2766,6 +2766,7 @@ GameObject:
   - component: {fileID: 162945009}
   - component: {fileID: 162945012}
   - component: {fileID: 162945013}
+  - component: {fileID: 162945014}
   m_Layer: 0
   m_Name: Submarine
   m_TagString: Player
@@ -2856,8 +2857,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playing: 0
   dead: 0
-  speed: 0.05
-  bottom: 3
+  speed: 0.1
+  bottom: 2
   top: 8
   top_positive: 1
   magnet: {fileID: 1192069307}
@@ -2876,7 +2877,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.47696912, y: 0.3483479}
+  m_Offset: {x: -2.4198384, y: 1.2212965}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2887,7 +2888,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.6677296, y: 2.3033042}
+  m_Size: {x: 0.5161638, y: 1.0766997}
   m_EdgeRadius: 0
 --- !u!95 &162945013
 Animator:
@@ -2908,6 +2909,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!70 &162945014
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 162945008}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.55372167, y: 0.51481855}
+  m_Size: {x: 3.7314153, y: 2.095734}
+  m_Direction: 1
 --- !u!1 &182701726
 GameObject:
   m_ObjectHideFlags: 0
@@ -3102,8 +3119,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   start_time: 3
-  minimum_time: 2.5
-  maximum_time: 3
+  minimum_time: 4
+  maximum_time: 5
   FGMap: {fileID: 1516294370}
   currentCell: {x: 24, y: -1, z: 0}
   levels: 12
@@ -19687,6 +19704,7 @@ MonoBehaviour:
   top: 10.5
   SeaMine: {fileID: 26551196372515798, guid: d60d66c2ab754c346883a0e7ad3e0a85, type: 3}
   Treasure: {fileID: 4356931452430565266, guid: 0f2d300db809251409e865b8798f892e, type: 3}
+  ratio: 0.4
   start_time: 2
   minimum_time: 1
   maximum_time: 3

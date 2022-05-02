@@ -23,6 +23,11 @@ public class PrefabSpawner : MonoBehaviour
 	[SerializeField] GameObject SeaMine;
 	[SerializeField] GameObject Treasure;
 	
+	[Tooltip("Spwan ratio of bombs and coins.")]
+	[SerializeField]
+	[Range(0, 3)]
+	public float ratio = 0.5f;
+	
 	[Header("Spawning Frequency")]
 	[Range(0, 10)]
 	[Tooltip("Set seconds after start not spawning anything.")]
@@ -60,7 +65,7 @@ public class PrefabSpawner : MonoBehaviour
 		        	// set up the next cooldown time randomly
 		        	timer=0;
 		        	float r = Random.Range(minimum_time, maximum_time);
-		        	cooldown = r/PlayerPrefs.GetFloat("TimeSpped");//TimeSpeed will increase the pacing by time
+		        	cooldown = r*((20-PlayerPrefs.GetFloat("TimeSpped"))/20);//TimeSpeed will increase the pacing by time
 		        	
 		        	// Spawn seamines or treasures
 		        	Vector3 position = transform.position;
@@ -71,9 +76,11 @@ public class PrefabSpawner : MonoBehaviour
 		        	else{position.y=top;}
 		        	Quaternion rotation = new Quaternion(0, 0, 0, 0);
 		        	
+		        	
 		        	//randomly select treasure or seamine
 		        	int r3 = Random.Range(0, 2);
-		        	if(r3==0){Instantiate(SeaMine, position, rotation);}
+		        	r3=r3*10;
+		        	if(r3<10*ratio){Instantiate(SeaMine, position, rotation);}
 		        	else{Instantiate(Treasure, position, rotation);}
 		        }
 	    	}
