@@ -26,6 +26,9 @@ public class RestartButton : MonoBehaviour
     	//Activate Player
     	player.dead=false;
     	player.playing=true;
+
+        AudioPlayer.instance.PlaySubBubbles();
+        AudioPlayer.instance.PlayMainMusic();
     	
     	//Close Leaderboard Window
     	Frame.SetActive(false);

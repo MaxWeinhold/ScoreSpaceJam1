@@ -47,6 +47,8 @@ public class StartButton : MonoBehaviour
     			PlayerPrefs.SetString("Username",userID);
     			player.playing=true;
     			Frame.SetActive(false);
+
+                AudioPlayer.instance.PlaySubBubbles();
     		}
     		else if(userID.Length==0){
     			

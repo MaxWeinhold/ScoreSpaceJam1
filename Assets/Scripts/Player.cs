@@ -160,6 +160,9 @@ public class Player : MonoBehaviour
     		//End game
     		playing=false;
     		dead=true;
+
+			AudioPlayer.instance.StopSubBubbles();
+			AudioPlayer.instance.StopMainMusic();
     		
     		//Submitting the online Highscore
     		StartCoroutine("DieRoutine", 1.0f);
