@@ -96,28 +96,28 @@ public class Player : MonoBehaviour
 	    	//Adjust Speed depending on Input
 	    	if(inputX<-0.1f){
 	    		PlayerPrefs.SetFloat("Speed",0.5f);
-	    		
-//	    		var emission = ps.emission;
-//       			emission.rateOverTime = 10;
-	    		//SFX-------------------------------------------------------------------------------
-	    		//Sound Speed adjustment (Maybe pitch)
+
+				//	    		var emission = ps.emission;
+				//       			emission.rateOverTime = 10;
+
+				FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Speed", 0.5f);
 	    	}
 	    	else if(inputX>0.1f){
 	    		PlayerPrefs.SetFloat("Speed",2);
-	    		
-//	    		var emission = ps.emission;
-//       			emission.rateOverTime = 70;
-	    		//SFX-------------------------------------------------------------------------------
-	    		//Sound Speed adjustment (Maybe pitch)
-	    	}
+
+				//	    		var emission = ps.emission;
+				//       			emission.rateOverTime = 70;
+
+				FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Speed", 2f);
+			}
 	    	else{
 	    		PlayerPrefs.SetFloat("Speed",1);
-	    		
-//	    		var emission = ps.emission;
-//       			emission.rateOverTime = 40;
-	    		//SFX-------------------------------------------------------------------------------
-	    		//Sound Speed adjustment (Maybe pitch)
-	    	}
+
+				//	    		var emission = ps.emission;
+				//       			emission.rateOverTime = 40;
+
+				FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Speed", 1f);
+			}
 	    	
 	    	//Magent Swap Action____________________
 	    	
@@ -166,6 +166,7 @@ public class Player : MonoBehaviour
 
 			AudioPlayer.instance.StopSubBubbles();
 			AudioPlayer.instance.StopMainMusic();
+			FMODUnity.RuntimeManager.PlayOneShotAttached("event:/SFX/Submarine/Submarine_Collision", gameObject);
     		
     		//Submitting the online Highscore
     		StartCoroutine("DieRoutine", 1.0f);
